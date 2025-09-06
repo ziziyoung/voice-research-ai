@@ -63,105 +63,107 @@ const projects = [
   }
 ];
 
-const Experience = () => {
+const Projects = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto px-6">
-        {/* Projects Section */}
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-4">
-            <span className="gradient-text">GenAI Projects</span>
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Recent AI/ML projects showcasing expertise in generative AI, voice interfaces, and competitive intelligence
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <Card key={index} className="tech-card group h-full">
-                <CardHeader>
-                  <CardTitle className="group-hover:text-primary transition-colors">
-                    {project.title}
-                  </CardTitle>
-                  <CardDescription className="text-sm text-muted-foreground">
-                    {project.period}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, idx) => (
-                      <Badge key={idx} variant="outline" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Experience Section */}
-        <div>
-          <h2 className="text-4xl font-bold text-center mb-4">
-            <span className="gradient-text">Professional Experience</span>
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            8+ years driving product innovation across enterprise SaaS, AI-RPA, and marketing automation platforms
-          </p>
-          
-          <div className="space-y-8">
-            {experiences.map((exp, index) => (
-              <Card key={index} className="tech-card group">
-                <CardHeader>
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                    <div>
-                      <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                        {exp.title}
-                      </CardTitle>
-                      <CardDescription className="text-lg font-medium mt-1">
-                        {exp.company}
-                      </CardDescription>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-3 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {exp.location}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {exp.period}
-                      </div>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-4">
-                    {exp.highlights.map((highlight, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span className="text-muted-foreground">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.skills.map((skill, idx) => (
-                      <Badge key={idx} variant="secondary" className="tech-card">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        <h2 className="text-4xl font-bold text-center mb-4">
+          <span className="gradient-text">GenAI Projects</span>
+        </h2>
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Recent AI/ML projects showcasing expertise in generative AI, voice interfaces, and competitive intelligence
+        </p>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <Card key={index} className="tech-card group h-full">
+              <CardHeader>
+                <CardTitle className="group-hover:text-primary transition-colors">
+                  {project.title}
+                </CardTitle>
+                <CardDescription className="text-sm text-muted-foreground">
+                  {project.period}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech, idx) => (
+                    <Badge key={idx} variant="outline" className="text-xs">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default Experience;
+const Experience = () => {
+  return (
+    <section className="py-20 bg-background">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center mb-4">
+          <span className="gradient-text">Professional Experience</span>
+        </h2>
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          8+ years driving product innovation across enterprise SaaS, AI-RPA, and marketing automation platforms
+        </p>
+        
+        <div className="space-y-8">
+          {experiences.map((exp, index) => (
+            <Card key={index} className="tech-card group">
+              <CardHeader>
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                  <div>
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                      {exp.title}
+                    </CardTitle>
+                    <CardDescription className="text-lg font-medium mt-1">
+                      {exp.company}
+                    </CardDescription>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-1">
+                      <MapPin className="w-4 h-4" />
+                      {exp.location}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-4 h-4" />
+                      {exp.period}
+                    </div>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 mb-4">
+                  {exp.highlights.map((highlight, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      <span className="text-muted-foreground">{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-wrap gap-2">
+                  {exp.skills.map((skill, idx) => (
+                    <Badge key={idx} variant="secondary" className="tech-card">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export { Projects, Experience };
