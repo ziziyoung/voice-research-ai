@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Brain, Code, Rocket, Target, Database, Zap } from "lucide-react";
+import { Brain, Code, Rocket, Target, Database, Zap, Users, DollarSign, TrendingDown, TrendingUp, Building, Clock } from "lucide-react";
 
 const skillCategories = [
   {
@@ -42,12 +42,12 @@ const skillCategories = [
 ];
 
 const achievements = [
-  { metric: "100M+", label: "Users Served", icon: "👥" },
-  { metric: "$100M+", label: "Upsell Revenue", icon: "💰" },
-  { metric: "90%", label: "Cost Reduction", icon: "📉" },
-  { metric: "2×", label: "Business Growth", icon: "📈" },
-  { metric: "450K+", label: "Enterprise Users", icon: "🏢" },
-  { metric: "8+", label: "Years Experience", icon: "⏱️" }
+  { metric: "100M+", label: "Users Served", icon: Users, color: "text-blue-400" },
+  { metric: "$100M+", label: "Upsell Revenue", icon: DollarSign, color: "text-green-400" },
+  { metric: "90%", label: "Cost Reduction", icon: TrendingDown, color: "text-orange-400" },
+  { metric: "2×", label: "Business Growth", icon: TrendingUp, color: "text-purple-400" },
+  { metric: "450K+", label: "Enterprise Users", icon: Building, color: "text-cyan-400" },
+  { metric: "8+", label: "Years Experience", icon: Clock, color: "text-pink-400" }
 ];
 
 const Skills = () => {
@@ -64,19 +64,26 @@ const Skills = () => {
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {achievements.map((achievement, index) => (
-              <Card key={index} className="tech-card text-center group">
-                <CardContent className="pt-6">
-                  <div className="text-2xl mb-2">{achievement.icon}</div>
-                  <div className="text-2xl font-bold gradient-text mb-1">
-                    {achievement.metric}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    {achievement.label}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {achievements.map((achievement, index) => {
+              const IconComponent = achievement.icon;
+              return (
+                <Card key={index} className="tech-card text-center group border-primary/10 hover:border-primary/30">
+                  <CardContent className="pt-6 pb-6">
+                    <div className="flex justify-center mb-3">
+                      <div className="p-3 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
+                        <IconComponent className={`w-6 h-6 ${achievement.color} group-hover:scale-110 transition-transform duration-300`} />
+                      </div>
+                    </div>
+                    <div className="text-2xl font-bold gradient-text mb-1 group-hover:scale-105 transition-transform duration-300">
+                      {achievement.metric}
+                    </div>
+                    <div className="text-sm text-muted-foreground font-medium">
+                      {achievement.label}
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
 
