@@ -43,7 +43,7 @@ const skillCategories = [
 
 const achievements = [
   { metric: "100M+", label: "Users Served", icon: Users, color: "text-blue-400" },
-  { metric: "$100M+", label: "Upsell Revenue", icon: DollarSign, color: "text-green-400" },
+  { metric: "$100B+", label: "Upsell Revenue", icon: DollarSign, color: "text-green-400" },
   { metric: "90%", label: "Cost Reduction", icon: TrendingDown, color: "text-orange-400" },
   { metric: "2×", label: "Business Growth", icon: TrendingUp, color: "text-purple-400" },
   { metric: "450K+", label: "Enterprise Users", icon: Building, color: "text-cyan-400" },
