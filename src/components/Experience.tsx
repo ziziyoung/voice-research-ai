@@ -67,8 +67,45 @@ const Experience = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto px-6">
-        {/* Experience Section */}
+        {/* Projects Section */}
         <div className="mb-20">
+          <h2 className="text-4xl font-bold text-center mb-4">
+            <span className="gradient-text">GenAI Projects</span>
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Recent AI/ML projects showcasing expertise in generative AI, voice interfaces, and competitive intelligence
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <Card key={index} className="tech-card group h-full">
+                <CardHeader>
+                  <CardTitle className="group-hover:text-primary transition-colors">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="text-sm text-muted-foreground">
+                    {project.period}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech, idx) => (
+                      <Badge key={idx} variant="outline" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Experience Section */}
+        <div>
           <h2 className="text-4xl font-bold text-center mb-4">
             <span className="gradient-text">Professional Experience</span>
           </h2>
@@ -114,43 +151,6 @@ const Experience = () => {
                     {exp.skills.map((skill, idx) => (
                       <Badge key={idx} variant="secondary" className="tech-card">
                         {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Projects Section */}
-        <div>
-          <h2 className="text-4xl font-bold text-center mb-4">
-            <span className="gradient-text">GenAI Projects</span>
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Recent AI/ML projects showcasing expertise in generative AI, voice interfaces, and competitive intelligence
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <Card key={index} className="tech-card group h-full">
-                <CardHeader>
-                  <CardTitle className="group-hover:text-primary transition-colors">
-                    {project.title}
-                  </CardTitle>
-                  <CardDescription className="text-sm text-muted-foreground">
-                    {project.period}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, idx) => (
-                      <Badge key={idx} variant="outline" className="text-xs">
-                        {tech}
                       </Badge>
                     ))}
                   </div>
