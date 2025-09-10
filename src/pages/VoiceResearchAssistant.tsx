@@ -97,7 +97,7 @@ const VoiceResearchAssistant = () => {
             <span className="gradient-text">Platform Showcase</span>
           </h2>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-3 gap-12 items-start">
             {/* Mobile Demo */}
             <div className="space-y-6">
               <div className="flex items-center gap-3 mb-6">
@@ -146,67 +146,108 @@ const VoiceResearchAssistant = () => {
             </div>
 
             {/* Web Demo */}
-            <div className="space-y-6">
-              <div className="flex items-center gap-3 mb-6">
-                <Monitor className="w-6 h-6 text-primary" />
-                <h3 className="text-2xl font-semibold">Voice-Scribe-Nexus Web Platform</h3>
+            <div className="space-y-8 lg:col-span-2">
+              <div className="flex items-center gap-3 mb-8">
+                <Monitor className="w-8 h-8 text-primary" />
+                <h3 className="text-3xl font-semibold">Voice-Scribe-Nexus Web Platform</h3>
               </div>
               
-              <div className="bg-card rounded-lg border border-border shadow-lg overflow-hidden">
+              <div className="bg-card rounded-xl border border-border shadow-2xl overflow-hidden">
                 {/* Browser chrome */}
-                <div className="bg-muted p-3 border-b border-border">
-                  <div className="flex items-center gap-2">
+                <div className="bg-muted p-4 border-b border-border">
+                  <div className="flex items-center gap-3">
                     <div className="flex gap-2">
-                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      <div className="w-4 h-4 rounded-full bg-red-500"></div>
+                      <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
+                      <div className="w-4 h-4 rounded-full bg-green-500"></div>
                     </div>
-                    <div className="flex-1 bg-background rounded px-3 py-1 text-sm text-muted-foreground ml-4">
+                    <div className="flex-1 bg-background rounded-lg px-4 py-2 text-base text-muted-foreground ml-6">
                       voice-scribe-nexus.ai
                     </div>
                   </div>
                 </div>
                 
                 {/* Web content */}
-                <div className="p-6 h-96 overflow-hidden">
-                  <div className="flex items-center justify-between mb-6">
-                    <h4 className="text-xl font-semibold">Research Dashboard</h4>
-                    <div className="flex gap-2">
-                      <Badge variant="outline">Live Session</Badge>
-                      <Badge variant="secondary">12 Active Users</Badge>
+                <div className="p-8 h-[600px] overflow-hidden">
+                  <div className="flex items-center justify-between mb-8">
+                    <h4 className="text-2xl font-semibold">Research Dashboard</h4>
+                    <div className="flex gap-3">
+                      <Badge variant="outline" className="text-base px-3 py-1">Live Session</Badge>
+                      <Badge variant="secondary" className="text-base px-3 py-1">12 Active Users</Badge>
                     </div>
                   </div>
                   
-                  {/* Dashboard mockup */}
-                  <div className="grid grid-cols-3 gap-4 mb-6">
+                  {/* Enhanced Dashboard mockup */}
+                  <div className="grid grid-cols-4 gap-6 mb-8">
                     <Card className="tech-card">
-                      <CardContent className="p-4">
-                        <div className="text-2xl font-bold">2.4k</div>
-                        <div className="text-sm text-muted-foreground">Papers Analyzed</div>
+                      <CardContent className="p-6">
+                        <div className="text-3xl font-bold mb-2">2.4k</div>
+                        <div className="text-base text-muted-foreground">Papers Analyzed</div>
                       </CardContent>
                     </Card>
                     <Card className="tech-card">
-                      <CardContent className="p-4">
-                        <div className="text-2xl font-bold">98%</div>
-                        <div className="text-sm text-muted-foreground">Accuracy Rate</div>
+                      <CardContent className="p-6">
+                        <div className="text-3xl font-bold mb-2">98%</div>
+                        <div className="text-base text-muted-foreground">Accuracy Rate</div>
                       </CardContent>
                     </Card>
                     <Card className="tech-card">
-                      <CardContent className="p-4">
-                        <div className="text-2xl font-bold">156h</div>
-                        <div className="text-sm text-muted-foreground">Time Saved</div>
+                      <CardContent className="p-6">
+                        <div className="text-3xl font-bold mb-2">156h</div>
+                        <div className="text-base text-muted-foreground">Time Saved</div>
+                      </CardContent>
+                    </Card>
+                    <Card className="tech-card">
+                      <CardContent className="p-6">
+                        <div className="text-3xl font-bold mb-2">47</div>
+                        <div className="text-base text-muted-foreground">Active Sessions</div>
                       </CardContent>
                     </Card>
                   </div>
                   
-                  {/* Research interface */}
-                  <div className="bg-background rounded-lg border border-border p-4">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="text-sm font-medium">Voice Analysis Active</span>
+                  {/* Enhanced Research interface */}
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="bg-background rounded-xl border border-border p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+                        <span className="text-lg font-medium">Voice Analysis Active</span>
+                      </div>
+                      <div className="text-base text-muted-foreground mb-4">
+                        "Analyzing quantum computing applications in neural networks..."
+                      </div>
+                      <div className="space-y-3">
+                        <div className="bg-primary/10 rounded-lg p-3">
+                          <div className="text-sm font-medium mb-1">Research Query</div>
+                          <div className="text-sm text-muted-foreground">Latest breakthroughs in quantum ML</div>
+                        </div>
+                        <div className="bg-card/50 rounded-lg p-3 border border-border/50">
+                          <div className="text-sm font-medium mb-1">AI Response</div>
+                          <div className="text-sm text-muted-foreground">Found 23 relevant papers from 2024...</div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-sm text-muted-foreground">
-                      "Analyzing quantum computing applications in neural networks..."
+                    
+                    <div className="bg-background rounded-xl border border-border p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <BarChart3 className="w-5 h-5 text-primary" />
+                        <span className="text-lg font-medium">Live Analytics</span>
+                      </div>
+                      <div className="space-y-4">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm">Query Processing</span>
+                          <span className="text-sm font-medium">0.3s avg</span>
+                        </div>
+                        <div className="w-full bg-muted rounded-full h-2">
+                          <div className="bg-primary h-2 rounded-full w-4/5"></div>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm">Voice Clarity</span>
+                          <span className="text-sm font-medium">98.2%</span>
+                        </div>
+                        <div className="w-full bg-muted rounded-full h-2">
+                          <div className="bg-green-500 h-2 rounded-full w-full"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
