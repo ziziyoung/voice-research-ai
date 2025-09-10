@@ -76,40 +76,48 @@ const Projects = () => {
         </p>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <Card key={index} className="tech-card group h-full">
-              <CardHeader>
-                <CardTitle className="group-hover:text-primary transition-colors">
-                  {project.title === "Voice-First Research Assistant" ? (
-                    <Link to="/voice-research-assistant" className="hover:underline">
-                      {project.title}
-                    </Link>
-                  ) : project.title === "Short-Video Competitive Analyst Lab" ? (
-                    <Link to="/short-video-analyst-lab" className="hover:underline">
-                      {project.title}
-                    </Link>
-                  ) : (
-                    project.title
-                  )}
-                </CardTitle>
-                <CardDescription className="text-sm text-muted-foreground">
-                  {project.period}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, idx) => (
-                    <Badge key={idx} variant="outline" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+          {projects.map((project, index) => {
+            const CardComponent = (
+              <Card className="tech-card group h-full cursor-pointer hover:shadow-lg transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="group-hover:text-primary transition-colors">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="text-sm text-muted-foreground">
+                    {project.period}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech, idx) => (
+                      <Badge key={idx} variant="outline" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            );
+
+            if (project.title === "Voice-First Research Assistant") {
+              return (
+                <Link key={index} to="/voice-research-assistant" className="block">
+                  {CardComponent}
+                </Link>
+              );
+            } else if (project.title === "Short-Video Competitive Analyst Lab") {
+              return (
+                <Link key={index} to="/short-video-analyst-lab" className="block">
+                  {CardComponent}
+                </Link>
+              );
+            } else {
+              return <div key={index}>{CardComponent}</div>;
+            }
+          })}
         </div>
       </div>
     </section>
