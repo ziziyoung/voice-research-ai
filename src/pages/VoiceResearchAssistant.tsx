@@ -70,22 +70,69 @@ const VoiceResearchAssistant = () => {
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-16 bg-card/30">
+      {/* Impact & Achievements */}
+      <section className="py-24 bg-card/30">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            <span className="gradient-text">Project Impact</span>
+          <h2 className="text-4xl font-bold text-center mb-16">
+            <span className="gradient-text">Impact & Achievements</span>
           </h2>
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {metrics.map((metric, index) => (
-              <Card key={index} className="tech-card text-center">
-                <CardContent className="pt-6">
-                  <metric.icon className="w-8 h-8 mx-auto mb-4 text-primary" />
-                  <div className="text-3xl font-bold mb-2">{metric.value}</div>
-                  <div className="text-sm text-muted-foreground">{metric.label}</div>
+              <Card key={index} className="tech-card text-center h-full">
+                <CardContent className="pt-8 pb-8">
+                  <metric.icon className="w-12 h-12 mx-auto mb-6 text-primary" />
+                  <div className="text-4xl font-bold mb-4">{metric.value}</div>
+                  <div className="text-base text-muted-foreground font-medium">{metric.label}</div>
                 </CardContent>
               </Card>
             ))}
+          </div>
+          
+          {/* Additional achievements */}
+          <div className="mt-16 grid md:grid-cols-2 gap-8">
+            <Card className="tech-card">
+              <CardHeader>
+                <CardTitle className="text-xl">Research Impact</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Processed 2.4K+ research papers with 98% accuracy</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Reduced research time by 60% through voice automation</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Enabled hands-free research workflows for accessibility</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+            
+            <Card className="tech-card">
+              <CardHeader>
+                <CardTitle className="text-xl">Technical Innovation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Multi-modal RAG integration with voice interfaces</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Real-time conversation context preservation</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Cross-platform deployment (H5 mobile + web)</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
