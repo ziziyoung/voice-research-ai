@@ -110,35 +110,14 @@ const VoiceResearchAssistant = () => {
                 <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-muted rounded-full"></div>
                 
                 {/* Screen content */}
-                <div className="absolute inset-4 bg-background rounded-[2.5rem] overflow-hidden">
-                  {/* Status bar */}
-                  <div className="h-8 bg-card border-b border-border flex items-center justify-between px-4 text-xs">
-                    <span>9:41</span>
-                    <span>100%</span>
-                  </div>
-                  
-                  {/* App content */}
-                  <div className="p-4 space-y-4">
-                    <h4 className="text-lg font-semibold text-center">Voice Research AI</h4>
-                    
-                    {/* Voice interface mockup */}
-                    <div className="bg-card rounded-lg p-4 border border-border">
-                      <div className="flex items-center justify-center mb-4">
-                        <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center animate-pulse">
-                          <Mic className="w-8 h-8 text-primary" />
-                        </div>
-                      </div>
-                      <p className="text-center text-sm text-muted-foreground">Listening...</p>
+                <div className="absolute inset-4 bg-background rounded-[2.5rem] overflow-hidden flex items-center justify-center">
+                  <div className="text-center space-y-3">
+                    <div className="w-16 h-16 mx-auto bg-muted rounded-full flex items-center justify-center">
+                      <Smartphone className="w-8 h-8 text-muted-foreground" />
                     </div>
-                    
-                    {/* Chat interface */}
-                    <div className="space-y-3">
-                      <div className="bg-primary/10 rounded-lg p-3">
-                        <p className="text-sm">Search for latest AI research papers on voice recognition</p>
-                      </div>
-                      <div className="bg-card rounded-lg p-3 border border-border">
-                        <p className="text-sm">Found 127 relevant papers. Here are the top 5...</p>
-                      </div>
+                    <div className="space-y-1">
+                      <h4 className="text-sm font-medium text-muted-foreground">Mobile Demo Video</h4>
+                      <p className="text-xs text-muted-foreground/80">Ready for video integration</p>
                     </div>
                   </div>
                 </div>
