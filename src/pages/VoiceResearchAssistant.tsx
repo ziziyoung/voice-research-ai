@@ -167,87 +167,15 @@ const VoiceResearchAssistant = () => {
                   </div>
                 </div>
                 
-                {/* Web content */}
-                <div className="p-8 h-[600px] overflow-hidden">
-                  <div className="flex items-center justify-between mb-8">
-                    <h4 className="text-2xl font-semibold">Research Dashboard</h4>
-                    <div className="flex gap-3">
-                      <Badge variant="outline" className="text-base px-3 py-1">Live Session</Badge>
-                      <Badge variant="secondary" className="text-base px-3 py-1">12 Active Users</Badge>
+                {/* Empty video frame */}
+                <div className="relative h-[600px] bg-background border-t border-border flex items-center justify-center">
+                  <div className="text-center space-y-4">
+                    <div className="w-24 h-24 mx-auto bg-muted rounded-full flex items-center justify-center">
+                      <Monitor className="w-12 h-12 text-muted-foreground" />
                     </div>
-                  </div>
-                  
-                  {/* Enhanced Dashboard mockup */}
-                  <div className="grid grid-cols-4 gap-6 mb-8">
-                    <Card className="tech-card">
-                      <CardContent className="p-6">
-                        <div className="text-3xl font-bold mb-2">2.4k</div>
-                        <div className="text-base text-muted-foreground">Papers Analyzed</div>
-                      </CardContent>
-                    </Card>
-                    <Card className="tech-card">
-                      <CardContent className="p-6">
-                        <div className="text-3xl font-bold mb-2">98%</div>
-                        <div className="text-base text-muted-foreground">Accuracy Rate</div>
-                      </CardContent>
-                    </Card>
-                    <Card className="tech-card">
-                      <CardContent className="p-6">
-                        <div className="text-3xl font-bold mb-2">156h</div>
-                        <div className="text-base text-muted-foreground">Time Saved</div>
-                      </CardContent>
-                    </Card>
-                    <Card className="tech-card">
-                      <CardContent className="p-6">
-                        <div className="text-3xl font-bold mb-2">47</div>
-                        <div className="text-base text-muted-foreground">Active Sessions</div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                  
-                  {/* Enhanced Research interface */}
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="bg-background rounded-xl border border-border p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
-                        <span className="text-lg font-medium">Voice Analysis Active</span>
-                      </div>
-                      <div className="text-base text-muted-foreground mb-4">
-                        "Analyzing quantum computing applications in neural networks..."
-                      </div>
-                      <div className="space-y-3">
-                        <div className="bg-primary/10 rounded-lg p-3">
-                          <div className="text-sm font-medium mb-1">Research Query</div>
-                          <div className="text-sm text-muted-foreground">Latest breakthroughs in quantum ML</div>
-                        </div>
-                        <div className="bg-card/50 rounded-lg p-3 border border-border/50">
-                          <div className="text-sm font-medium mb-1">AI Response</div>
-                          <div className="text-sm text-muted-foreground">Found 23 relevant papers from 2024...</div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-background rounded-xl border border-border p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <BarChart3 className="w-5 h-5 text-primary" />
-                        <span className="text-lg font-medium">Live Analytics</span>
-                      </div>
-                      <div className="space-y-4">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm">Query Processing</span>
-                          <span className="text-sm font-medium">0.3s avg</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div className="bg-primary h-2 rounded-full w-4/5"></div>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm">Voice Clarity</span>
-                          <span className="text-sm font-medium">98.2%</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div className="bg-green-500 h-2 rounded-full w-full"></div>
-                        </div>
-                      </div>
+                    <div className="space-y-2">
+                      <h4 className="text-xl font-medium text-muted-foreground">Video Content Placeholder</h4>
+                      <p className="text-sm text-muted-foreground/80">Ready for demo video integration</p>
                     </div>
                   </div>
                 </div>
