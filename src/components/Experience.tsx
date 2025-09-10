@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, TrendingUp, Users, DollarSign } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const experiences = [
   {
@@ -79,7 +80,13 @@ const Projects = () => {
             <Card key={index} className="tech-card group h-full">
               <CardHeader>
                 <CardTitle className="group-hover:text-primary transition-colors">
-                  {project.title}
+                  {project.title === "Voice-First Research Assistant" ? (
+                    <Link to="/voice-research-assistant" className="hover:underline">
+                      {project.title}
+                    </Link>
+                  ) : (
+                    project.title
+                  )}
                 </CardTitle>
                 <CardDescription className="text-sm text-muted-foreground">
                   {project.period}
