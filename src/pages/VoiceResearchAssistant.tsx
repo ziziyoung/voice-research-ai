@@ -97,41 +97,43 @@ const VoiceResearchAssistant = () => {
             <span className="gradient-text">Platform Showcase</span>
           </h2>
           
-          <div className="grid lg:grid-cols-3 gap-12 items-start">
-            {/* Mobile Demo */}
-            <div className="space-y-6">
-              <div className="flex items-center gap-3 mb-6">
+          <div className="space-y-16">
+            {/* Mobile Demo - Row 1 */}
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-3 mb-8">
                 <Smartphone className="w-6 h-6 text-primary" />
                 <h3 className="text-2xl font-semibold">Mobile H5 Interface</h3>
               </div>
               
-              <div className="relative mx-auto w-80 h-[600px] bg-gradient-to-b from-card to-card/80 rounded-[3rem] border-8 border-border shadow-2xl">
-                {/* Phone bezel */}
-                <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-muted rounded-full"></div>
-                
-                {/* Screen content */}
-                <div className="absolute inset-4 bg-background rounded-[2.5rem] overflow-hidden flex items-center justify-center">
-                  <div className="text-center space-y-3">
-                    <div className="w-16 h-16 mx-auto bg-muted rounded-full flex items-center justify-center">
-                      <Smartphone className="w-8 h-8 text-muted-foreground" />
-                    </div>
-                    <div className="space-y-1">
-                      <h4 className="text-sm font-medium text-muted-foreground">Mobile Demo Video</h4>
-                      <p className="text-xs text-muted-foreground/80">Ready for video integration</p>
+              <div className="flex justify-center">
+                <div className="relative w-80 h-[600px] bg-gradient-to-b from-card to-card/80 rounded-[3rem] border-8 border-border shadow-2xl">
+                  {/* Phone bezel */}
+                  <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-muted rounded-full"></div>
+                  
+                  {/* Screen content */}
+                  <div className="absolute inset-4 bg-background rounded-[2.5rem] overflow-hidden flex items-center justify-center">
+                    <div className="text-center space-y-3">
+                      <div className="w-16 h-16 mx-auto bg-muted rounded-full flex items-center justify-center">
+                        <Smartphone className="w-8 h-8 text-muted-foreground" />
+                      </div>
+                      <div className="space-y-1">
+                        <h4 className="text-sm font-medium text-muted-foreground">Mobile Demo Video</h4>
+                        <p className="text-xs text-muted-foreground/80">Ready for video integration</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Web Demo */}
-            <div className="space-y-8 lg:col-span-2">
-              <div className="flex items-center gap-3 mb-8">
+            {/* Web Demo - Row 2 */}
+            <div className="space-y-8">
+              <div className="flex items-center justify-center gap-3">
                 <Monitor className="w-8 h-8 text-primary" />
                 <h3 className="text-3xl font-semibold">Voice-Scribe-Nexus Web Platform</h3>
               </div>
               
-              <div className="bg-card rounded-xl border border-border shadow-2xl overflow-hidden">
+              <div className="bg-card rounded-xl border border-border shadow-2xl overflow-hidden max-w-6xl mx-auto">
                 {/* Browser chrome */}
                 <div className="bg-muted p-4 border-b border-border">
                   <div className="flex items-center gap-3">
