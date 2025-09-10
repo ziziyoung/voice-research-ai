@@ -97,9 +97,9 @@ const VoiceResearchAssistant = () => {
             <span className="gradient-text">Platform Showcase</span>
           </h2>
           
-          <div className="grid lg:grid-cols-3 gap-12 items-start">
+          <div className="grid lg:grid-cols-5 gap-12 items-start">
             {/* Mobile Demo */}
-            <div className="space-y-6">
+            <div className="space-y-6 lg:col-span-2">
               <div className="flex items-center gap-3 mb-6">
                 <Smartphone className="w-6 h-6 text-primary" />
                 <h3 className="text-2xl font-semibold">Mobile H5 Interface</h3>
@@ -146,7 +146,7 @@ const VoiceResearchAssistant = () => {
             </div>
 
             {/* Web Demo */}
-            <div className="space-y-8 lg:col-span-2">
+            <div className="space-y-8 lg:col-span-3">
               <div className="flex items-center gap-3 mb-8">
                 <Monitor className="w-8 h-8 text-primary" />
                 <h3 className="text-3xl font-semibold">Voice-Scribe-Nexus Web Platform</h3>
