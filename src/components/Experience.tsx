@@ -84,6 +84,10 @@ const Projects = () => {
                     <Link to="/voice-research-assistant" className="hover:underline">
                       {project.title}
                     </Link>
+                  ) : project.title === "Short-Video Competitive Analyst Lab" ? (
+                    <Link to="/short-video-analyst-lab" className="hover:underline">
+                      {project.title}
+                    </Link>
                   ) : (
                     project.title
                   )}
