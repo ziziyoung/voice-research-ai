@@ -70,26 +70,6 @@ const VoiceResearchAssistant = () => {
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-16 bg-card/30">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            <span className="gradient-text">Project Impact</span>
-          </h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            {metrics.map((metric, index) => (
-              <Card key={index} className="tech-card text-center">
-                <CardContent className="pt-6">
-                  <metric.icon className="w-8 h-8 mx-auto mb-4 text-primary" />
-                  <div className="text-3xl font-bold mb-2">{metric.value}</div>
-                  <div className="text-sm text-muted-foreground">{metric.label}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Demo Showcase */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
@@ -163,6 +143,26 @@ const VoiceResearchAssistant = () => {
                   <CardDescription className="text-muted-foreground">
                     {feature.description}
                   </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Key Metrics */}
+      <section className="py-16 bg-card/30">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            <span className="gradient-text">Project Impact</span>
+          </h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            {metrics.map((metric, index) => (
+              <Card key={index} className="tech-card text-center">
+                <CardContent className="pt-6">
+                  <metric.icon className="w-8 h-8 mx-auto mb-4 text-primary" />
+                  <div className="text-3xl font-bold mb-2">{metric.value}</div>
+                  <div className="text-sm text-muted-foreground">{metric.label}</div>
                 </CardContent>
               </Card>
             ))}
