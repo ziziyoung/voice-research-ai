@@ -106,22 +106,8 @@ const VoiceResearchAssistant = () => {
               </div>
               
               <div className="bg-card rounded-xl border border-border shadow-2xl overflow-hidden max-w-6xl mx-auto">
-                {/* Browser chrome */}
-                <div className="bg-muted p-4 border-b border-border">
-                  <div className="flex items-center gap-3">
-                    <div className="flex gap-2">
-                      <div className="w-4 h-4 rounded-full bg-red-500"></div>
-                      <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
-                      <div className="w-4 h-4 rounded-full bg-green-500"></div>
-                    </div>
-                    <div className="flex-1 bg-background rounded-lg px-4 py-2 text-base text-muted-foreground ml-6">
-                      voice-scribe-nexus.ai
-                    </div>
-                  </div>
-                </div>
-                
                 {/* Empty video frame */}
-                <div className="relative h-[600px] bg-background border-t border-border flex items-center justify-center">
+                <div className="relative h-[600px] bg-background flex items-center justify-center">
                   <div className="text-center space-y-4">
                     <div className="w-24 h-24 mx-auto bg-muted rounded-full flex items-center justify-center">
                       <Monitor className="w-12 h-12 text-muted-foreground" />
