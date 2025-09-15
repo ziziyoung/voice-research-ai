@@ -84,26 +84,6 @@ const ShortVideoAnalystLab = () => {
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-16 bg-card/30">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            <span className="gradient-text">Platform Impact</span>
-          </h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            {metrics.map((metric, index) => (
-              <Card key={index} className="tech-card text-center">
-                <CardContent className="pt-6">
-                  <metric.icon className="w-8 h-8 mx-auto mb-4 text-primary" />
-                  <div className="text-3xl font-bold mb-2">{metric.value}</div>
-                  <div className="text-sm text-muted-foreground">{metric.label}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Dashboard Showcase */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
@@ -121,6 +101,26 @@ const ShortVideoAnalystLab = () => {
                 <p className="text-sm text-muted-foreground/80">Ready for dashboard demo video integration</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Metrics */}
+      <section className="py-16 bg-card/30">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            <span className="gradient-text">Platform Impact</span>
+          </h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            {metrics.map((metric, index) => (
+              <Card key={index} className="tech-card text-center">
+                <CardContent className="pt-6">
+                  <metric.icon className="w-8 h-8 mx-auto mb-4 text-primary" />
+                  <div className="text-3xl font-bold mb-2">{metric.value}</div>
+                  <div className="text-sm text-muted-foreground">{metric.label}</div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
