@@ -111,7 +111,7 @@ const ShortVideoAnalystLab = () => {
             <span className="gradient-text">Analytics Dashboard</span>
           </h2>
           
-          <div className="relative h-[600px] bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto flex items-center justify-center">
+          <div className="relative h-[800px] bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-7xl mx-auto flex items-center justify-center">
             <div className="text-center space-y-4">
               <div className="w-24 h-24 mx-auto bg-muted rounded-full flex items-center justify-center">
                 <BarChart3 className="w-12 h-12 text-muted-foreground" />
