@@ -111,139 +111,16 @@ const ShortVideoAnalystLab = () => {
             <span className="gradient-text">Analytics Dashboard</span>
           </h2>
           
-          <div className="max-w-6xl mx-auto">
-            <Card className="tech-card overflow-hidden">
-              {/* Dashboard Header */}
-              <div className="bg-card border-b border-border p-6">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-semibold">Competitive Intelligence Dashboard</h3>
-                  <div className="flex gap-2">
-                    <Badge variant="secondary">Live Data</Badge>
-                    <Badge variant="outline">Last Updated: 2 min ago</Badge>
-                  </div>
-                </div>
+          <div className="relative h-[600px] bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto flex items-center justify-center">
+            <div className="text-center space-y-4">
+              <div className="w-24 h-24 mx-auto bg-muted rounded-full flex items-center justify-center">
+                <BarChart3 className="w-12 h-12 text-muted-foreground" />
               </div>
-
-              {/* Dashboard Content */}
-              <CardContent className="p-6">
-                <div className="grid lg:grid-cols-3 gap-6">
-                  {/* Main Analytics */}
-                  <div className="lg:col-span-2 space-y-6">
-                    {/* Platform Performance */}
-                    <Card className="tech-card">
-                      <CardHeader>
-                        <CardTitle className="flex items-center gap-2">
-                          <BarChart3 className="w-5 h-5 text-primary" />
-                          Platform Performance Overview
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-4">
-                          {platforms.map((platform, index) => (
-                            <div key={index} className="flex items-center justify-between">
-                              <div>
-                                <div className="font-medium">{platform.name}</div>
-                                <div className="text-sm text-muted-foreground">Coverage: {platform.coverage}</div>
-                              </div>
-                              <div className="text-right">
-                                <div className="font-semibold">{platform.insights}</div>
-                                <div className="text-sm text-muted-foreground">insights</div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    {/* Trend Analysis */}
-                    <Card className="tech-card">
-                      <CardHeader>
-                        <CardTitle className="flex items-center gap-2">
-                          <TrendingUp className="w-5 h-5 text-primary" />
-                          Trending Analysis
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="grid md:grid-cols-2 gap-4">
-                          <div className="space-y-3">
-                            <h4 className="font-medium">Top Hashtags</h4>
-                            <div className="space-y-2">
-                              {["#AI", "#TechTrends", "#Innovation", "#FutureTech"].map((tag, index) => (
-                                <div key={index} className="flex items-center gap-2">
-                                  <Hash className="w-3 h-3 text-muted-foreground" />
-                                  <span className="text-sm">{tag}</span>
-                                  <Badge variant="outline" className="ml-auto">
-                                    {Math.floor(Math.random() * 100) + 50}%
-                                  </Badge>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                          <div className="space-y-3">
-                            <h4 className="font-medium">Emerging Trends</h4>
-                            <div className="space-y-2">
-                              {["Voice AI", "Short-form Education", "AR Filters", "Live Shopping"].map((trend, index) => (
-                                <div key={index} className="flex items-center justify-between">
-                                  <span className="text-sm">{trend}</span>
-                                  <div className="flex items-center gap-1">
-                                    <TrendingUp className="w-3 h-3 text-green-500" />
-                                    <span className="text-xs text-green-500">+{Math.floor(Math.random() * 50) + 10}%</span>
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-
-                  {/* Sidebar Analytics */}
-                  <div className="space-y-6">
-                    {/* Real-time Stats */}
-                    <Card className="tech-card">
-                      <CardHeader>
-                        <CardTitle className="text-lg">Real-time Stats</CardTitle>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-primary">847K</div>
-                          <div className="text-sm text-muted-foreground">Videos Analyzed Today</div>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-green-500">94.2%</div>
-                          <div className="text-sm text-muted-foreground">Accuracy Rate</div>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-purple-500">156</div>
-                          <div className="text-sm text-muted-foreground">New Trends Detected</div>
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    {/* Competitor Tracking */}
-                    <Card className="tech-card">
-                      <CardHeader>
-                        <CardTitle className="text-lg">Competitor Tracking</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-3">
-                          {["Brand A", "Brand B", "Brand C"].map((brand, index) => (
-                            <div key={index} className="flex items-center justify-between">
-                              <span className="text-sm font-medium">{brand}</span>
-                              <div className="flex items-center gap-2">
-                                <Eye className="w-3 h-3 text-muted-foreground" />
-                                <span className="text-xs">{Math.floor(Math.random() * 50) + 20}M</span>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              <div className="space-y-2">
+                <h4 className="text-xl font-medium text-muted-foreground">Video Demo Placeholder</h4>
+                <p className="text-sm text-muted-foreground/80">Ready for dashboard demo video integration</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
