@@ -341,6 +341,134 @@ const VoiceResearchAssistant = () => {
         </div>
       </section>
 
+      {/* Roadmap */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            <span className="gradient-text">Product Roadmap</span>
+          </h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  quarter: "Q2 2024",
+                  title: "Enhanced Voice Intelligence",
+                  status: "in-progress",
+                  features: [
+                    "Multi-language voice support",
+                    "Emotional context recognition",
+                    "Advanced voice personalization",
+                    "Noise cancellation improvements"
+                  ]
+                },
+                {
+                  quarter: "Q3 2024",
+                  title: "Collaborative Features",
+                  status: "planned",
+                  features: [
+                    "Team research workspaces",
+                    "Real-time collaboration",
+                    "Shared knowledge bases",
+                    "Voice meeting integration"
+                  ]
+                },
+                {
+                  quarter: "Q4 2024",
+                  title: "Advanced Analytics",
+                  status: "planned",
+                  features: [
+                    "Research pattern analysis",
+                    "Productivity insights",
+                    "Custom dashboards",
+                    "Usage optimization suggestions"
+                  ]
+                },
+                {
+                  quarter: "Q1 2025",
+                  title: "Enterprise Integration",
+                  status: "planned",
+                  features: [
+                    "Enterprise SSO support",
+                    "Custom API endpoints",
+                    "Advanced security features",
+                    "Compliance tools (GDPR, HIPAA)"
+                  ]
+                }
+              ].map((roadmapItem, index) => (
+                <Card key={index} className="tech-card">
+                  <CardHeader>
+                    <div className="flex items-center justify-between">
+                      <CardTitle className="flex items-center gap-2">
+                        <Calendar className="w-5 h-5 text-primary" />
+                        {roadmapItem.quarter}
+                      </CardTitle>
+                      <Badge variant={
+                        roadmapItem.status === 'in-progress' ? 'default' :
+                        roadmapItem.status === 'planned' ? 'outline' : 'secondary'
+                      }>
+                        {roadmapItem.status.replace('-', ' ')}
+                      </Badge>
+                    </div>
+                    <CardDescription className="text-lg font-semibold text-foreground">
+                      {roadmapItem.title}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {roadmapItem.features.map((feature, idx) => (
+                        <li key={idx} className="text-sm flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Future Vision */}
+            <Card className="tech-card mt-12">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Target className="w-5 h-5 text-primary" />
+                  Long-term Vision
+                </CardTitle>
+                <CardDescription>
+                  Building the future of AI-powered research assistance
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Mic className="w-6 h-6 text-primary" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Universal Voice Interface</h4>
+                    <p className="text-sm text-muted-foreground">Seamless voice interaction across all devices and platforms</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <BarChart3 className="w-6 h-6 text-primary" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Predictive Research</h4>
+                    <p className="text-sm text-muted-foreground">AI that anticipates research needs and proactively suggests insights</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Users className="w-6 h-6 text-primary" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Global Knowledge Network</h4>
+                    <p className="text-sm text-muted-foreground">Connected research communities sharing insights in real-time</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Key Metrics */}
       <section className="py-16 bg-card/30">
         <div className="container mx-auto px-6">
