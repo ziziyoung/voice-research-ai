@@ -17,35 +17,35 @@ All colors MUST be HSL.
     --popover: 75 60% 85%;
     --popover-foreground: 75 25% 15%;
 
-    --primary: 75 85% 60%;
+    --primary: 75 80% 40%;
     --primary-foreground: 75 80% 95%;
 
-    --secondary: 75 40% 75%;
+    --secondary: 75 30% 65%;
     --secondary-foreground: 75 25% 15%;
 
-    --muted: 75 35% 80%;
+    --muted: 75 30% 70%;
     --muted-foreground: 75 15% 35%;
 
-    --accent: 45 95% 65%;
+    --accent: 45 90% 55%;
     --accent-foreground: 75 25% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 75 45% 70%;
-    --input: 75 55% 85%;
-    --ring: 75 85% 60%;
+    --border: 75 40% 60%;
+    --input: 75 50% 80%;
+    --ring: 75 80% 40%;
 
     /* Custom portfolio colors */
-    --tech-lime: 75 85% 60%;
-    --tech-yellow: 45 95% 65%;
-    --tech-green: 105 65% 55%;
-    --gradient-primary: linear-gradient(135deg, hsl(75 85% 60%), hsl(45 95% 65%));
-    --gradient-secondary: linear-gradient(135deg, hsl(45 95% 65%), hsl(105 65% 55%));
-    --gradient-accent: linear-gradient(90deg, hsl(75 85% 60% / 0.1), hsl(45 95% 65% / 0.1));
+    --tech-lime: 75 80% 40%;
+    --tech-yellow: 45 90% 55%;
+    --tech-green: 105 60% 45%;
+    --gradient-primary: linear-gradient(135deg, hsl(75 80% 40%), hsl(45 90% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 90% 55%), hsl(105 60% 45%));
+    --gradient-accent: linear-gradient(90deg, hsl(75 80% 40% / 0.1), hsl(45 90% 55% / 0.1));
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(75 85% 60% / 0.3);
+    --shadow-glow: 0 0 40px hsl(75 80% 40% / 0.3);
     --shadow-soft: 0 10px 30px -10px hsl(75 20% 15% / 0.5);
     
     /* Animations */
