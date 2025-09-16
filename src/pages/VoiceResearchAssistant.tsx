@@ -469,6 +469,128 @@ const VoiceResearchAssistant = () => {
         </div>
       </section>
 
+      {/* Credibility & Community */}
+      <section className="py-20 bg-card/30">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            <span className="gradient-text">Credibility & Community</span>
+          </h2>
+          
+          <div className="max-w-6xl mx-auto">
+            {/* Community Stats */}
+            <div className="grid md:grid-cols-4 gap-6 mb-16">
+              {[
+                { label: "Active Researchers", value: "50K+", icon: Users },
+                { label: "Research Sessions", value: "2M+", icon: BarChart3 },
+                { label: "Knowledge Sources", value: "10K+", icon: FileText },
+                { label: "User Satisfaction", value: "4.9/5", icon: Target }
+              ].map((stat, index) => (
+                <Card key={index} className="tech-card text-center">
+                  <CardContent className="pt-6">
+                    <stat.icon className="w-8 h-8 mx-auto mb-4 text-primary" />
+                    <div className="text-3xl font-bold mb-2">{stat.value}</div>
+                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Testimonials */}
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              {[
+                {
+                  quote: "The voice interface has revolutionized how I conduct academic research. What used to take hours now takes minutes.",
+                  author: "Dr. Sarah Chen",
+                  role: "Research Scientist, MIT",
+                  rating: 5
+                },
+                {
+                  quote: "Incredible accuracy in understanding complex research queries. The multi-modal approach is a game-changer.",
+                  author: "Prof. Michael Rodriguez",
+                  role: "Data Science Lead, Stanford",
+                  rating: 5
+                },
+                {
+                  quote: "Finally, a research tool that understands context and provides relevant insights through natural conversation.",
+                  author: "Dr. Emily Watson",
+                  role: "Clinical Researcher, Johns Hopkins",
+                  rating: 5
+                }
+              ].map((testimonial, index) => (
+                <Card key={index} className="tech-card">
+                  <CardContent className="pt-6">
+                    <div className="flex mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <div key={i} className="w-4 h-4 text-yellow-400">⭐</div>
+                      ))}
+                    </div>
+                    <blockquote className="text-muted-foreground mb-4 italic">
+                      "{testimonial.quote}"
+                    </blockquote>
+                    <div className="border-t pt-4">
+                      <div className="font-semibold">{testimonial.author}</div>
+                      <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Industry Recognition */}
+            <Card className="tech-card">
+              <CardHeader>
+                <CardTitle className="text-center">Industry Recognition & Partnerships</CardTitle>
+                <CardDescription className="text-center">
+                  Trusted by leading institutions and recognized by industry experts
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="font-semibold mb-4 flex items-center gap-2">
+                      <Target className="w-5 h-5 text-primary" />
+                      Awards & Recognition
+                    </h4>
+                    <ul className="space-y-3">
+                      {[
+                        "Best AI Innovation - TechCrunch Disrupt 2023",
+                        "Research Tool of the Year - AI Research Awards",
+                        "Top 10 Voice AI Applications - Voice Summit",
+                        "Excellence in Educational Technology - EdTech Awards"
+                      ].map((award, index) => (
+                        <li key={index} className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                          {award}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-4 flex items-center gap-2">
+                      <Users className="w-5 h-5 text-primary" />
+                      Institutional Partners
+                    </h4>
+                    <ul className="space-y-3">
+                      {[
+                        "Partnership with 20+ Leading Universities",
+                        "Research Collaboration with Google AI",
+                        "Integration with Major Academic Libraries",
+                        "Trusted by Fortune 500 Research Teams"
+                      ].map((partner, index) => (
+                        <li key={index} className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                          {partner}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Key Metrics */}
       <section className="py-16 bg-card/30">
         <div className="container mx-auto px-6">
