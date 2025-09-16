@@ -8,45 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 25% 5%;
-    --foreground: 220 15% 95%;
+    --background: 75 80% 75%;
+    --foreground: 75 20% 15%;
 
-    --card: 220 20% 8%;
-    --card-foreground: 220 15% 95%;
+    --card: 75 60% 85%;
+    --card-foreground: 75 25% 15%;
 
-    --popover: 220 20% 8%;
-    --popover-foreground: 220 15% 95%;
+    --popover: 75 60% 85%;
+    --popover-foreground: 75 25% 15%;
 
-    --primary: 213 93% 65%;
-    --primary-foreground: 220 25% 5%;
+    --primary: 75 80% 40%;
+    --primary-foreground: 75 80% 95%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 220 15% 85%;
+    --secondary: 75 30% 65%;
+    --secondary-foreground: 75 25% 15%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 75 30% 70%;
+    --muted-foreground: 75 15% 35%;
 
-    --accent: 280 85% 70%;
-    --accent-foreground: 220 25% 5%;
+    --accent: 45 90% 55%;
+    --accent-foreground: 75 25% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 15%;
-    --ring: 213 93% 65%;
+    --border: 75 40% 60%;
+    --input: 75 50% 80%;
+    --ring: 75 80% 40%;
 
     /* Custom portfolio colors */
-    --tech-blue: 213 93% 65%;
-    --tech-purple: 280 85% 70%;
-    --tech-cyan: 185 85% 65%;
-    --gradient-primary: linear-gradient(135deg, hsl(213 93% 65%), hsl(280 85% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(280 85% 70%), hsl(185 85% 65%));
-    --gradient-accent: linear-gradient(90deg, hsl(213 93% 65% / 0.1), hsl(280 85% 70% / 0.1));
+    --tech-lime: 75 80% 40%;
+    --tech-yellow: 45 90% 55%;
+    --tech-green: 105 60% 45%;
+    --gradient-primary: linear-gradient(135deg, hsl(75 80% 40%), hsl(45 90% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 90% 55%), hsl(105 60% 45%));
+    --gradient-accent: linear-gradient(90deg, hsl(75 80% 40% / 0.1), hsl(45 90% 55% / 0.1));
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(213 93% 65% / 0.3);
-    --shadow-soft: 0 10px 30px -10px hsl(220 25% 5% / 0.5);
+    --shadow-glow: 0 0 40px hsl(75 80% 40% / 0.3);
+    --shadow-soft: 0 10px 30px -10px hsl(75 20% 15% / 0.5);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
