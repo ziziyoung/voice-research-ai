@@ -150,6 +150,79 @@ const VoiceResearchAssistant = () => {
         </div>
       </section>
 
+      {/* Use Cases */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            <span className="gradient-text">Use Cases</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Academic Research",
+                description: "Students and researchers conducting literature reviews, data analysis, and hypothesis testing through voice commands.",
+                icon: FileText,
+                examples: ["Literature synthesis", "Citation management", "Data interpretation"]
+              },
+              {
+                title: "Business Intelligence",
+                description: "Executives and analysts accessing market research, competitor analysis, and strategic insights hands-free.",
+                icon: TrendingUp,
+                examples: ["Market analysis", "Competitive research", "Trend identification"]
+              },
+              {
+                title: "Content Creation",
+                description: "Writers and content creators gathering research, fact-checking, and organizing information through voice interaction.",
+                icon: Mic,
+                examples: ["Fact verification", "Source gathering", "Content ideation"]
+              },
+              {
+                title: "Healthcare Research",
+                description: "Medical professionals accessing clinical studies, drug information, and treatment protocols via voice.",
+                icon: Target,
+                examples: ["Clinical studies", "Drug interactions", "Treatment protocols"]
+              },
+              {
+                title: "Legal Research",
+                description: "Legal professionals searching case law, statutes, and legal precedents through natural language queries.",
+                icon: Users,
+                examples: ["Case law search", "Statute research", "Legal precedents"]
+              },
+              {
+                title: "Technical Documentation",
+                description: "Engineers and developers accessing API docs, technical specifications, and troubleshooting guides.",
+                icon: Calendar,
+                examples: ["API documentation", "Code examples", "Troubleshooting guides"]
+              }
+            ].map((useCase, index) => (
+              <Card key={index} className="tech-card">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-2">
+                    <useCase.icon className="w-6 h-6 text-primary" />
+                    <CardTitle>{useCase.title}</CardTitle>
+                  </div>
+                  <CardDescription>{useCase.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2">
+                    <h5 className="text-sm font-medium text-muted-foreground">Key Applications:</h5>
+                    <ul className="space-y-1">
+                      {useCase.examples.map((example, idx) => (
+                        <li key={idx} className="text-sm flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                          {example}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Architecture Snapshot */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
