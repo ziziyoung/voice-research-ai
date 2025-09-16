@@ -231,112 +231,17 @@ const VoiceResearchAssistant = () => {
           </h2>
           
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              {/* User Interface Layer */}
-              <Card className="tech-card">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Monitor className="w-5 h-5 text-primary" />
-                    User Interface
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="space-y-2">
-                    <Badge variant="outline" className="w-full justify-center">React Web App</Badge>
-                    <Badge variant="outline" className="w-full justify-center">Mobile H5 Interface</Badge>
-                    <Badge variant="outline" className="w-full justify-center">Voice Input/Output</Badge>
-                    <Badge variant="outline" className="w-full justify-center">Real-time UI Updates</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Processing Layer */}
-              <Card className="tech-card">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <BarChart3 className="w-5 h-5 text-primary" />
-                    AI Processing
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="space-y-2">
-                    <Badge variant="outline" className="w-full justify-center">NotebookLM Core</Badge>
-                    <Badge variant="outline" className="w-full justify-center">Multi-modal RAG</Badge>
-                    <Badge variant="outline" className="w-full justify-center">Voice Recognition</Badge>
-                    <Badge variant="outline" className="w-full justify-center">Context Management</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Data Layer */}
-              <Card className="tech-card">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <FileText className="w-5 h-5 text-primary" />
-                    Data & Storage
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="space-y-2">
-                    <Badge variant="outline" className="w-full justify-center">Vector Database</Badge>
-                    <Badge variant="outline" className="w-full justify-center">Knowledge Base</Badge>
-                    <Badge variant="outline" className="w-full justify-center">Session Storage</Badge>
-                    <Badge variant="outline" className="w-full justify-center">Analytics Data</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Data Flow Visualization */}
-            <Card className="tech-card">
-              <CardHeader>
-                <CardTitle>Data Flow Architecture</CardTitle>
-                <CardDescription>
-                  How information flows through the voice research assistant system
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-3">
-                      <Mic className="w-8 h-8 text-primary" />
-                    </div>
-                    <h4 className="font-semibold">Voice Input</h4>
-                    <p className="text-sm text-muted-foreground">User speaks query</p>
-                  </div>
-                  
-                  <div className="hidden md:block text-muted-foreground">→</div>
-                  
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-3">
-                      <BarChart3 className="w-8 h-8 text-primary" />
-                    </div>
-                    <h4 className="font-semibold">AI Processing</h4>
-                    <p className="text-sm text-muted-foreground">RAG + Analysis</p>
-                  </div>
-                  
-                  <div className="hidden md:block text-muted-foreground">→</div>
-                  
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-3">
-                      <FileText className="w-8 h-8 text-primary" />
-                    </div>
-                    <h4 className="font-semibold">Knowledge Retrieval</h4>
-                    <p className="text-sm text-muted-foreground">Vector search</p>
-                  </div>
-                  
-                  <div className="hidden md:block text-muted-foreground">→</div>
-                  
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-3">
-                      <MessageSquare className="w-8 h-8 text-primary" />
-                    </div>
-                    <h4 className="font-semibold">Response</h4>
-                    <p className="text-sm text-muted-foreground">Voice + visual output</p>
-                  </div>
+            <div className="relative h-[600px] bg-card rounded-xl border border-border shadow-lg overflow-hidden flex items-center justify-center">
+              <div className="text-center space-y-4">
+                <div className="w-24 h-24 mx-auto bg-muted rounded-full flex items-center justify-center">
+                  <BarChart3 className="w-12 h-12 text-muted-foreground" />
                 </div>
-              </CardContent>
-            </Card>
+                <div className="space-y-2">
+                  <h4 className="text-xl font-medium text-muted-foreground">Architecture Diagram Placeholder</h4>
+                  <p className="text-sm text-muted-foreground/80">Ready for architecture sheet or image integration</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
