@@ -98,27 +98,6 @@ const VoiceResearchAssistant = () => {
               </div>
             </div>
 
-            {/* Mobile Demo - Row 2 */}
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-3 mb-8">
-                <Smartphone className="w-6 h-6 text-primary" />
-                <h3 className="text-2xl font-semibold">Mobile H5 Interface</h3>
-              </div>
-              
-              <div className="flex justify-center">
-                <div className="relative w-80 h-[600px] bg-card rounded-xl border border-border shadow-lg overflow-hidden flex items-center justify-center">
-                  <div className="text-center space-y-3">
-                    <div className="w-16 h-16 mx-auto bg-muted rounded-full flex items-center justify-center">
-                      <Smartphone className="w-8 h-8 text-muted-foreground" />
-                    </div>
-                    <div className="space-y-1">
-                      <h4 className="text-sm font-medium text-muted-foreground">Mobile Demo Video</h4>
-                      <p className="text-xs text-muted-foreground/80">Ready for video integration</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
