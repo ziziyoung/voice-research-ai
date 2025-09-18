@@ -1,14 +1,78 @@
-import { ArrowLeft, Smartphone, Monitor, Users, Target, Calendar, TrendingUp, Mic, MessageSquare, FileText, BarChart3 } from "lucide-react";
+import { ArrowLeft, Smartphone, Monitor, Users, Target, Calendar, TrendingUp, Mic, MessageSquare, FileText, BarChart3, Clock, Zap, Shield, Database } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import MetricsModule from "@/components/MetricsModule";
 
 const VoiceResearchAssistant = () => {
-  const metrics = [
-    { label: "User Engagement", value: "95%", icon: Users },
-    { label: "Research Efficiency", value: "3x", icon: TrendingUp },
-    { label: "Voice Accuracy", value: "98%", icon: Mic },
-    { label: "Time Saved", value: "60%", icon: Target }
+  const performanceMetrics = [
+    { 
+      label: "User Engagement", 
+      value: "95%", 
+      change: "+12%",
+      trend: "up" as const,
+      icon: Users,
+      description: "Monthly active users interaction rate"
+    },
+    { 
+      label: "Research Efficiency", 
+      value: "3x", 
+      change: "+2.1x",
+      trend: "up" as const,
+      icon: TrendingUp,
+      description: "Faster research completion vs traditional methods"
+    },
+    { 
+      label: "Voice Accuracy", 
+      value: "98%", 
+      change: "+3%",
+      trend: "up" as const,
+      icon: Mic,
+      description: "Speech recognition accuracy rate"
+    },
+    { 
+      label: "Time Saved", 
+      value: "60%", 
+      change: "+15%",
+      trend: "up" as const,
+      icon: Target,
+      description: "Average time reduction in research tasks"
+    }
+  ];
+
+  const technicalMetrics = [
+    {
+      label: "Response Time",
+      value: "1.2s",
+      change: "-0.3s",
+      trend: "up" as const,
+      icon: Zap,
+      description: "Average AI response latency"
+    },
+    {
+      label: "Uptime",
+      value: "99.9%",
+      change: "+0.1%",
+      trend: "up" as const,
+      icon: Shield,
+      description: "System availability and reliability"
+    },
+    {
+      label: "Data Processing",
+      value: "10TB",
+      change: "+2TB",
+      trend: "up" as const,
+      icon: Database,
+      description: "Monthly processed research data"
+    },
+    {
+      label: "Session Duration",
+      value: "45min",
+      change: "+12min",
+      trend: "up" as const,
+      icon: Clock,
+      description: "Average user session length"
+    }
   ];
 
   const features = [
@@ -250,25 +314,21 @@ const VoiceResearchAssistant = () => {
       </section>
 
 
-      {/* Key Metrics */}
-      <section className="py-16 bg-card/30">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            <span className="gradient-text">Metrics</span>
-          </h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            {metrics.map((metric, index) => (
-              <Card key={index} className="tech-card text-center">
-                <CardContent className="pt-6">
-                  <metric.icon className="w-8 h-8 mx-auto mb-4 text-primary" />
-                  <div className="text-3xl font-bold mb-2">{metric.value}</div>
-                  <div className="text-sm text-muted-foreground">{metric.label}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Performance Metrics */}
+      <MetricsModule 
+        title="Performance Metrics"
+        description="Key performance indicators measuring platform effectiveness and user satisfaction"
+        metrics={performanceMetrics}
+        className="bg-card/30"
+      />
+
+      {/* Technical Metrics */}
+      <MetricsModule 
+        title="Technical Metrics"
+        description="System performance and infrastructure metrics ensuring optimal user experience"
+        metrics={technicalMetrics}
+        className="bg-background"
+      />
 
       {/* Technical Stack */}
       <section className="py-20 bg-background">
