@@ -55,12 +55,6 @@ const projects = [
     description: "AI-driven insights & dashboard for Cross-Platform analysis",
     tech: ["AI Analytics", "Dashboard", "Competitive Intelligence"],
     period: "2023 – Present"
-  },
-  {
-    title: "C++ CNN & ML Pipeline",
-    description: "End-to-end ML pipeline achieving ~90% benchmark accuracy",
-    tech: ["C++", "CNN", "ML Pipeline", "Deep Learning"],
-    period: "2023 – Present"
   }
 ];
 
