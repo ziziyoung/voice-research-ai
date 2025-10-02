@@ -1,4 +1,4 @@
-import { ArrowLeft, BarChart3, TrendingUp, Eye, Users, Target, Calendar, Zap, Monitor, Smartphone, Play, Hash } from "lucide-react";
+import { ArrowLeft, BarChart3, TrendingUp, Eye, Users, Target, Calendar, Zap, Monitor, Smartphone, Play, Hash, Database, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -161,6 +161,114 @@ const ShortVideoAnalystLab = () => {
           </div>
         </div>
       </section>
+
+      {/* Datasets Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            <span className="gradient-text">Datasets & Resources</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <Card className="tech-card">
+              <CardHeader>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <Database className="w-6 h-6 text-primary flex-shrink-0" />
+                    <CardTitle>YouTube-8M Segments Dataset</CardTitle>
+                  </div>
+                  <a 
+                    href="https://research.google.com/youtube8m/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 transition-colors"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Large-scale labeled video dataset for video understanding research
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="tech-card">
+              <CardHeader>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <Database className="w-6 h-6 text-primary flex-shrink-0" />
+                    <CardTitle>AntM²C Dataset</CardTitle>
+                  </div>
+                  <a 
+                    href="https://www.atecup.cn/datasets" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 transition-colors"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Multi-Scenario Multi-Modal CTR Dataset for click-through rate prediction
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="tech-card">
+              <CardHeader>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <Database className="w-6 h-6 text-primary flex-shrink-0" />
+                    <CardTitle>YouTube Shorts & TikTok 2025 Trends</CardTitle>
+                  </div>
+                  <a 
+                    href="https://www.kaggle.com/datasets/tarekmasryo/youtube-shorts-and-tiktok-trends-2025" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 transition-colors"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Latest trends and patterns across YouTube Shorts and TikTok platforms
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="tech-card">
+              <CardHeader>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <Database className="w-6 h-6 text-primary flex-shrink-0" />
+                    <CardTitle>Short Video Engagement Dataset</CardTitle>
+                  </div>
+                  <a 
+                    href="https://www.kaggle.com/datasets/programmer3/short-video-engagement-dataset" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 transition-colors"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Scalable cross-platform multimodal AI for short-form video (Shorts, TikTok, Reels)
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
 
 
     </div>
