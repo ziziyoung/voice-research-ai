@@ -49,7 +49,7 @@ const projects = [
   {
     title: "Voice-First Research Assistant",
     description: "Multi-modal RAG + voice interaction for research workflows",
-    tech: ["NotebookLM", "Huxe", "Voice Mode", "RAG"],
+    tech: ["NotebookLM", "Huxe", "Voice Mode", "RAG", "Knowledge Graph"],
     period: "Present",
     image: voiceResearchImg,
     link: "/voice-research-assistant"
