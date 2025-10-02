@@ -1,7 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, TrendingUp, Users, DollarSign } from "lucide-react";
+import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import voiceResearchImg from "@/assets/voice-research-assistant.jpg";
+import shortVideoImg from "@/assets/short-video-analyst.jpg";
 
 const experiences = [
   {
@@ -48,13 +50,17 @@ const projects = [
     title: "Voice-First Research Assistant",
     description: "Multi-modal RAG + voice interaction for research workflows",
     tech: ["NotebookLM", "Huxe", "Voice Mode", "RAG"],
-    period: "2023 – Present"
+    period: "2023 – Present",
+    image: voiceResearchImg,
+    link: "/voice-research-assistant"
   },
   {
     title: "Short-Video Competitive Analyst Lab",
     description: "AI-driven insights & dashboard for Cross-Platform analysis",
     tech: ["AI Analytics", "Dashboard", "Competitive Intelligence"],
-    period: "2023 – Present"
+    period: "2023 – Present",
+    image: shortVideoImg,
+    link: "/short-video-analyst-lab"
   }
 ];
 
@@ -69,22 +75,33 @@ const Projects = () => {
           Recent AI/ML projects showcasing expertise in generative AI, voice interfaces, and competitive intelligence
         </p>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => {
-            const CardComponent = (
-              <Card className="tech-card group h-full cursor-pointer hover:shadow-lg transition-all duration-300">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {projects.map((project, index) => (
+            <Link key={index} to={project.link} className="block group">
+              <Card className="tech-card overflow-hidden h-full hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div className="relative overflow-hidden aspect-video">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <Badge variant="secondary" className="mb-2">
+                      {project.period}
+                    </Badge>
+                  </div>
+                </div>
                 <CardHeader>
-                  <CardTitle className="group-hover:text-primary transition-colors">
+                  <CardTitle className="text-2xl group-hover:text-primary transition-colors flex items-center justify-between">
                     {project.title}
+                    <ArrowRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                   </CardTitle>
-                  <CardDescription className="text-sm text-muted-foreground">
-                    {project.period}
+                  <CardDescription className="text-base">
+                    {project.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    {project.description}
-                  </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, idx) => (
                       <Badge key={idx} variant="outline" className="text-xs">
@@ -94,24 +111,8 @@ const Projects = () => {
                   </div>
                 </CardContent>
               </Card>
-            );
-
-            if (project.title === "Voice-First Research Assistant") {
-              return (
-                <Link key={index} to="/voice-research-assistant" className="block">
-                  {CardComponent}
-                </Link>
-              );
-            } else if (project.title === "Short-Video Competitive Analyst Lab") {
-              return (
-                <Link key={index} to="/short-video-analyst-lab" className="block">
-                  {CardComponent}
-                </Link>
-              );
-            } else {
-              return <div key={index}>{CardComponent}</div>;
-            }
-          })}
+            </Link>
+          ))}
         </div>
       </div>
     </section>
