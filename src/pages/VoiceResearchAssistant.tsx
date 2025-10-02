@@ -330,57 +330,6 @@ const VoiceResearchAssistant = () => {
         className="bg-background"
       />
 
-      {/* Technical Stack */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            <span className="gradient-text">Technical Architecture</span>
-          </h2>
-          
-          <div className="max-w-4xl mx-auto">
-            <Card className="tech-card">
-              <CardHeader>
-                <CardTitle>Technology Stack</CardTitle>
-                <CardDescription>
-                  Modern AI-first architecture built for scale and performance
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div>
-                    <h4 className="font-semibold mb-3 text-primary">AI & ML</h4>
-                    <div className="space-y-2">
-                      <Badge variant="outline">NotebookLM</Badge>
-                      <Badge variant="outline">Retrieval-Augmented Generation</Badge>
-                      <Badge variant="outline">Voice Processing</Badge>
-                      <Badge variant="outline">Multi-modal AI</Badge>
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-3 text-primary">Frontend</h4>
-                    <div className="space-y-2">
-                      <Badge variant="outline">React</Badge>
-                      <Badge variant="outline">TypeScript</Badge>
-                      <Badge variant="outline">WebRTC</Badge>
-                      <Badge variant="outline">Progressive Web App</Badge>
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-3 text-primary">Backend</h4>
-                    <div className="space-y-2">
-                      <Badge variant="outline">Node.js</Badge>
-                      <Badge variant="outline">WebSocket</Badge>
-                      <Badge variant="outline">Vector Database</Badge>
-                      <Badge variant="outline">Real-time Analytics</Badge>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Project Timeline */}
       <section className="py-20 bg-card/30">
         <div className="container mx-auto px-6">
