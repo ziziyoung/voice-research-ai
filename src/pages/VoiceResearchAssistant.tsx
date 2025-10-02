@@ -381,6 +381,45 @@ const VoiceResearchAssistant = () => {
         </div>
       </section>
 
+      {/* Project Timeline */}
+      <section className="py-20 bg-card/30">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            <span className="gradient-text">Development Timeline</span>
+          </h2>
+          
+          <div className="max-w-3xl mx-auto">
+            <div className="space-y-8">
+              {[
+                { phase: "Research & Planning", period: "Q1 2023", status: "completed" },
+                { phase: "MVP Development", period: "Q2 2023", status: "completed" },
+                { phase: "Voice Integration", period: "Q3 2023", status: "completed" },
+                { phase: "Advanced RAG Features", period: "Q4 2023", status: "in-progress" },
+                { phase: "Enterprise Deployment", period: "Q1 2024", status: "planned" }
+              ].map((milestone, index) => (
+                <div key={index} className="flex items-center gap-6">
+                  <div className={`w-4 h-4 rounded-full ${
+                    milestone.status === 'completed' ? 'bg-green-500' :
+                    milestone.status === 'in-progress' ? 'bg-primary animate-pulse' :
+                    'bg-muted'
+                  }`}></div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold">{milestone.phase}</h4>
+                    <p className="text-sm text-muted-foreground">{milestone.period}</p>
+                  </div>
+                  <Badge variant={
+                    milestone.status === 'completed' ? 'secondary' :
+                    milestone.status === 'in-progress' ? 'default' :
+                    'outline'
+                  }>
+                    {milestone.status.replace('-', ' ')}
+                  </Badge>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
