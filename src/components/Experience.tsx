@@ -50,7 +50,7 @@ const projects = [
     title: "Voice-First Research Assistant",
     description: "Multi-modal RAG + voice interaction for research workflows",
     tech: ["NotebookLM", "Huxe", "Voice Mode", "RAG"],
-    period: "2023 – Present",
+    period: "Present",
     image: voiceResearchImg,
     link: "/voice-research-assistant"
   },
@@ -58,7 +58,7 @@ const projects = [
     title: "Short-Video Competitive Analyst Lab",
     description: "AI-driven insights & dashboard for Cross-Platform analysis",
     tech: ["AI Analytics", "Dashboard", "Competitive Intelligence"],
-    period: "2023 – Present",
+    period: "Present",
     image: shortVideoImg,
     link: "/short-video-analyst-lab"
   }
