@@ -392,9 +392,9 @@ const VoiceResearchAssistant = () => {
             <div className="space-y-8">
               {[
                 { phase: "Research & Planning", period: "Q1 2023", status: "completed" },
-                { phase: "MVP Development", period: "Q2 2023", status: "completed" },
+                { phase: "MVP Development", period: "Q2 2023", status: "in-progress" },
                 { phase: "Voice Integration", period: "Q3 2023", status: "completed" },
-                { phase: "Advanced RAG Features", period: "Q4 2023", status: "in-progress" },
+                { phase: "Advanced RAG Features", period: "Q4 2023", status: "planned" },
                 { phase: "Enterprise Deployment", period: "Q1 2024", status: "planned" }
               ].map((milestone, index) => (
                 <div key={index} className="flex items-center gap-6">
