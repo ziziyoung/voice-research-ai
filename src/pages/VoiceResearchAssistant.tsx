@@ -297,17 +297,17 @@ const VoiceResearchAssistant = () => {
       <section className="py-20 bg-card/30">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
-            <span className="gradient-text">Development Timeline</span>
+            <span className="gradient-text">Product Roadmap</span>
           </h2>
           
           <div className="max-w-3xl mx-auto">
             <div className="space-y-8">
               {[
-                { phase: "Research & Planning", period: "Q1 2023", status: "completed" },
-                { phase: "MVP Development", period: "Q2 2023", status: "in-progress" },
-                { phase: "Voice Integration", period: "Q3 2023", status: "planned" },
-                { phase: "Advanced RAG Features", period: "Q4 2023", status: "planned" },
-                { phase: "Enterprise Deployment", period: "Q1 2024", status: "planned" }
+                { phase: "Research & Planning", period: "Q1 2025", status: "completed" },
+                { phase: "MVP Development", period: "Q2 2025", status: "in-progress" },
+                { phase: "Voice Integration", period: "Q3 2025", status: "planned" },
+                { phase: "Advanced RAG Features", period: "Q4 2025", status: "planned" },
+                { phase: "Enterprise Deployment", period: "Q1 2026", status: "planned" }
               ].map((milestone, index) => (
                 <div key={index} className="flex items-center gap-6">
                   <div className={`w-4 h-4 rounded-full ${
