@@ -36,8 +36,8 @@ const Hero = () => {
           
           {/* Tagline */}
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            8+ years building impactful B2B/B2C SaaS products. From ML engineer to enterprise platforms serving 100M+ users.
-            <span className="gradient-text font-semibold"> Designing AI-driven scalable solutions</span> that drive business growth.
+            8+ yrs SaaS | 100M+ users | $100B+ upsell | ML & Product | 
+            <span className="gradient-text font-semibold"> AI-driven scalable solutions</span> | Business growth
           </p>
           
           {/* Contact Info */}
