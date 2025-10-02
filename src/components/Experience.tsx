@@ -57,7 +57,7 @@ const projects = [
   {
     title: "Short-Video Competitive Analyst Lab",
     description: "AI-driven insights & dashboard for Cross-Platform analysis",
-    tech: ["AI Analytics", "Dashboard", "Competitive Intelligence"],
+    tech: ["AI Analytics", "Dashboard", "Competitive Intelligence", "Cross-Platform", "Multi-Modal Data"],
     period: "Present",
     image: shortVideoImg,
     link: "/short-video-analyst-lab"
