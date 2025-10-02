@@ -314,13 +314,6 @@ const VoiceResearchAssistant = () => {
       </section>
 
 
-      {/* Performance Metrics */}
-      <MetricsModule 
-        title="Performance Metrics"
-        description="Key performance indicators measuring platform effectiveness and user satisfaction"
-        metrics={performanceMetrics}
-        className="bg-card/30"
-      />
 
 
       {/* Project Timeline */}
