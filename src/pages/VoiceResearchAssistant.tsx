@@ -393,7 +393,7 @@ const VoiceResearchAssistant = () => {
               {[
                 { phase: "Research & Planning", period: "Q1 2023", status: "completed" },
                 { phase: "MVP Development", period: "Q2 2023", status: "in-progress" },
-                { phase: "Voice Integration", period: "Q3 2023", status: "completed" },
+                { phase: "Voice Integration", period: "Q3 2023", status: "planned" },
                 { phase: "Advanced RAG Features", period: "Q4 2023", status: "planned" },
                 { phase: "Enterprise Deployment", period: "Q1 2024", status: "planned" }
               ].map((milestone, index) => (
