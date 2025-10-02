@@ -322,13 +322,6 @@ const VoiceResearchAssistant = () => {
         className="bg-card/30"
       />
 
-      {/* Technical Metrics */}
-      <MetricsModule 
-        title="Technical Metrics"
-        description="System performance and infrastructure metrics ensuring optimal user experience"
-        metrics={technicalMetrics}
-        className="bg-background"
-      />
 
       {/* Project Timeline */}
       <section className="py-20 bg-card/30">
