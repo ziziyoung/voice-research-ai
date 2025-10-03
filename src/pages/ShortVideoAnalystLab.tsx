@@ -83,10 +83,12 @@ const ShortVideoAnalystLab = () => {
             </div>
             <Button 
               asChild
-              className="gap-2"
+              size="lg"
+              variant="default"
+              className="gap-2 text-lg"
             >
               <a href="https://short-form-insight.lovable.app/" target="_blank" rel="noopener noreferrer">
-                <Play className="w-4 h-4" />
+                <Play className="w-5 h-5" />
                 View Demo
               </a>
             </Button>
