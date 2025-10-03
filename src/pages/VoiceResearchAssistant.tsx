@@ -156,10 +156,6 @@ const VoiceResearchAssistant = () => {
           <div className="space-y-16">
             {/* Web Demo - Row 1 */}
             <div className="space-y-8">
-              <div className="flex items-center justify-center gap-3">
-                <Monitor className="w-8 h-8 text-primary" />
-                <h3 className="text-3xl font-semibold">Voice-Scribe-Nexus Web Platform</h3>
-              </div>
               
               <div className="relative h-[600px] bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto flex items-center justify-center">
                 <div className="text-center space-y-4">
