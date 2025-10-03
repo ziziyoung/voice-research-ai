@@ -1,7 +1,8 @@
-import { ArrowLeft, BarChart3, TrendingUp, Eye, Users, Target, Calendar, Zap, Monitor, Smartphone, Play, Hash, Database, ExternalLink } from "lucide-react";
+import { ArrowLeft, BarChart3, TrendingUp, Eye, Users, Target, Calendar, Zap, Monitor, Smartphone, Play, Hash, Database, ExternalLink, ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const ShortVideoAnalystLab = () => {
   const metrics = [
@@ -74,12 +75,21 @@ const ShortVideoAnalystLab = () => {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               AI-driven competitive intelligence platform providing deep insights and real-time analytics across all major short-video platforms.
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
               <Badge variant="secondary" className="tech-card">Cross-Platform Analysis</Badge>
               <Badge variant="secondary" className="tech-card">AI-Driven Insights</Badge>
               <Badge variant="secondary" className="tech-card">Real-time Dashboard</Badge>
               <Badge variant="secondary" className="tech-card">Competitive Intelligence</Badge>
             </div>
+            <Button 
+              asChild
+              className="gap-2"
+            >
+              <a href="https://short-form-insight.lovable.app/" target="_blank" rel="noopener noreferrer">
+                View Demo
+                <ArrowDown className="w-4 h-4" />
+              </a>
+            </Button>
           </div>
         </div>
       </section>
