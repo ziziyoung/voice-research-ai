@@ -1,4 +1,4 @@
-import { ArrowLeft, Smartphone, Monitor, Users, Target, Calendar, TrendingUp, Mic, MessageSquare, FileText, BarChart3, Clock, Zap, Shield, Database, ArrowDown } from "lucide-react";
+import { ArrowLeft, Smartphone, Monitor, Users, Target, Calendar, TrendingUp, Mic, MessageSquare, FileText, BarChart3, Clock, Zap, Shield, Database, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -136,8 +136,8 @@ const VoiceResearchAssistant = () => {
               className="gap-2"
             >
               <a href="https://articulate-aid-ai.lovable.app/" target="_blank" rel="noopener noreferrer">
+                <Play className="w-4 h-4" />
                 View Demo
-                <ArrowDown className="w-4 h-4" />
               </a>
             </Button>
           </div>
