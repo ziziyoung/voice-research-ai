@@ -1,7 +1,8 @@
-import { ArrowLeft, Smartphone, Monitor, Users, Target, Calendar, TrendingUp, Mic, MessageSquare, FileText, BarChart3, Clock, Zap, Shield, Database } from "lucide-react";
+import { ArrowLeft, Smartphone, Monitor, Users, Target, Calendar, TrendingUp, Mic, MessageSquare, FileText, BarChart3, Clock, Zap, Shield, Database, ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import MetricsModule from "@/components/MetricsModule";
 
 const VoiceResearchAssistant = () => {
@@ -124,18 +125,25 @@ const VoiceResearchAssistant = () => {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Revolutionary AI-powered research platform combining multi-modal RAG with intuitive voice interaction for next-generation research workflows.
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
               <Badge variant="secondary" className="tech-card">NotebookLM Integration</Badge>
               <Badge variant="secondary" className="tech-card">Voice Mode</Badge>
               <Badge variant="secondary" className="tech-card">Multi-modal RAG</Badge>
               <Badge variant="secondary" className="tech-card">Real-time Analytics</Badge>
             </div>
+            <Button 
+              onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
+              className="gap-2"
+            >
+              View Demo
+              <ArrowDown className="w-4 h-4" />
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Demo Showcase */}
-      <section className="py-20 bg-background">
+      <section id="demo-section" className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
             <span className="gradient-text">Platform Showcase</span>
