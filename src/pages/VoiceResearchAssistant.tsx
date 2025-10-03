@@ -132,11 +132,13 @@ const VoiceResearchAssistant = () => {
               <Badge variant="secondary" className="tech-card">Real-time Analytics</Badge>
             </div>
             <Button 
-              onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
+              asChild
               className="gap-2"
             >
-              View Demo
-              <ArrowDown className="w-4 h-4" />
+              <a href="https://articulate-aid-ai.lovable.app/" target="_blank" rel="noopener noreferrer">
+                View Demo
+                <ArrowDown className="w-4 h-4" />
+              </a>
             </Button>
           </div>
         </div>
