@@ -166,29 +166,6 @@ const VoiceResearchAssistant = () => {
         </div>
       </section>
 
-      {/* Architecture Snapshot */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            <span className="gradient-text">Architecture Snapshot</span>
-          </h2>
-          
-          <div className="max-w-6xl mx-auto">
-            <div className="relative h-[600px] bg-card rounded-xl border border-border shadow-lg overflow-hidden flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="w-24 h-24 mx-auto bg-muted rounded-full flex items-center justify-center">
-                  <BarChart3 className="w-12 h-12 text-muted-foreground" />
-                </div>
-                <div className="space-y-2">
-                  <h4 className="text-xl font-medium text-muted-foreground">Architecture Diagram Placeholder</h4>
-                  <p className="text-sm text-muted-foreground/80">Ready for architecture sheet or image integration</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Technical Features */}
       <section className="py-20 bg-card/30">
         <div className="container mx-auto px-6">
