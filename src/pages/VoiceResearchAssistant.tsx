@@ -157,13 +157,16 @@ const VoiceResearchAssistant = () => {
             {/* Web Demo - Row 1 */}
             <div className="space-y-8">
               
-              <div className="relative h-[600px] bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto">
-                <iframe
-                  src="https://drive.google.com/file/d/1z1Fl3wFlmK0sFgkWCmNjFqmP4qnMHtcF/preview"
-                  className="w-full h-full"
-                  allow="autoplay"
-                  title="Voice Research Assistant Demo"
-                />
+              <div className="relative h-[600px] bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto flex items-center justify-center">
+                <div className="text-center space-y-4">
+                  <div className="w-24 h-24 mx-auto bg-muted rounded-full flex items-center justify-center">
+                    <Monitor className="w-12 h-12 text-muted-foreground" />
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="text-xl font-medium text-muted-foreground">Video Content Placeholder</h4>
+                    <p className="text-sm text-muted-foreground/80">Ready for demo video integration</p>
+                  </div>
+                </div>
               </div>
             </div>
 
