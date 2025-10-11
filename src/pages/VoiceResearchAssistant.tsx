@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import MetricsModule from "@/components/MetricsModule";
 import showcaseImage from "@/assets/voice-assistant-showcase.png";
+import knowledgeGraph1 from "@/assets/knowledge-graph-1.png";
+import knowledgeGraph2 from "@/assets/knowledge-graph-2.png";
 
 const VoiceResearchAssistant = () => {
   const performanceMetrics = [
@@ -155,12 +157,34 @@ const VoiceResearchAssistant = () => {
           </h2>
           
           <div className="space-y-16">
-            {/* Platform Showcase Image */}
+            {/* Platform Showcase Image 1 */}
             <div className="space-y-8">
               <div className="relative bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto">
                 <img 
                   src={showcaseImage} 
                   alt="Voice Research Assistant Platform Interface showing Document Management, AI Indexes, and Research Analysis features"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Knowledge Graph Showcase 1 */}
+            <div className="space-y-8">
+              <div className="relative bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto">
+                <img 
+                  src={knowledgeGraph1} 
+                  alt="Knowledge Graph visualization showing Computer Vision research connections including Deep Learning, CNN Architectures, Object Detection, and Image Segmentation"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Knowledge Graph Showcase 2 */}
+            <div className="space-y-8">
+              <div className="relative bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto">
+                <img 
+                  src={knowledgeGraph2} 
+                  alt="Knowledge Graph visualization showing Natural Language Processing research connections including Attention Mechanisms, Transformers, BERT, and GPT Architecture"
                   className="w-full h-auto object-contain"
                 />
               </div>
