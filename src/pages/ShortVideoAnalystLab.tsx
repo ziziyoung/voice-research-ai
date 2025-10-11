@@ -120,7 +120,10 @@ const ShortVideoAnalystLab = () => {
                 onDoubleClick={() => setSelectedImage(dashboardOverview)}
                 style={{ 
                   imageRendering: 'auto',
-                  filter: 'contrast(1.1) saturate(1.1)'
+                  filter: 'contrast(1.15) saturate(1.15) brightness(1.05)',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)'
                 }}
               />
             </div>
@@ -134,7 +137,10 @@ const ShortVideoAnalystLab = () => {
                 onDoubleClick={() => setSelectedImage(dashboardNlpAnalysis)}
                 style={{ 
                   imageRendering: 'auto',
-                  filter: 'contrast(1.1) saturate(1.1)'
+                  filter: 'contrast(1.15) saturate(1.15) brightness(1.05)',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)'
                 }}
               />
             </div>
@@ -148,7 +154,10 @@ const ShortVideoAnalystLab = () => {
                 onDoubleClick={() => setSelectedImage(dashboardInsights)}
                 style={{ 
                   imageRendering: 'auto',
-                  filter: 'contrast(1.1) saturate(1.1)'
+                  filter: 'contrast(1.15) saturate(1.15) brightness(1.05)',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)'
                 }}
               />
             </div>
@@ -173,7 +182,7 @@ const ShortVideoAnalystLab = () => {
                     className="w-full h-auto"
                     style={{ 
                       imageRendering: 'auto',
-                      filter: 'contrast(1.1) saturate(1.1)'
+                      filter: 'contrast(1.15) saturate(1.15) brightness(1.05)'
                     }}
                   />
                 )}
