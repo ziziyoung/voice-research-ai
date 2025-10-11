@@ -1,10 +1,17 @@
-import { ArrowLeft, BarChart3, TrendingUp, Eye, Users, Target, Calendar, Zap, Monitor, Smartphone, Play, Hash, Database, ExternalLink, ArrowDown } from "lucide-react";
+import { ArrowLeft, BarChart3, TrendingUp, Eye, Users, Target, Calendar, Zap, Monitor, Smartphone, Play, Hash, Database, ExternalLink, ArrowDown, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import dashboardOverview from "@/assets/dashboard-overview.png";
+import dashboardNlpAnalysis from "@/assets/dashboard-nlp-analysis.png";
+import dashboardInsights from "@/assets/dashboard-insights.png";
+import { useState } from "react";
 
 const ShortVideoAnalystLab = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  
   const metrics = [
     { label: "Platforms Analyzed", value: "12+", icon: Monitor },
     { label: "Videos Processed", value: "2.8M", icon: Play },
@@ -103,17 +110,76 @@ const ShortVideoAnalystLab = () => {
             <span className="gradient-text">Analytics Dashboard</span>
           </h2>
           
-          <div className="relative h-[800px] bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-7xl mx-auto flex items-center justify-center">
-            <div className="text-center space-y-4">
-              <div className="w-24 h-24 mx-auto bg-muted rounded-full flex items-center justify-center">
-                <BarChart3 className="w-12 h-12 text-muted-foreground" />
-              </div>
-              <div className="space-y-2">
-                <h4 className="text-xl font-medium text-muted-foreground">Video Demo Placeholder</h4>
-                <p className="text-sm text-muted-foreground/80">Ready for dashboard demo video integration</p>
-              </div>
+          <div className="space-y-8 max-w-7xl mx-auto">
+            {/* Dashboard Overview */}
+            <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden">
+              <img 
+                src={dashboardOverview}
+                alt="Short-Video Competitive Analyst Lab - Platform Overview Dashboard showing TikTok, YouTube Shorts, and Instagram Reels analytics with engagement metrics, prediction & simulation tools, and AI-powered strategy analysis"
+                className="w-full h-auto cursor-pointer hover:opacity-95 transition-opacity"
+                onDoubleClick={() => setSelectedImage(dashboardOverview)}
+                style={{ 
+                  imageRendering: 'auto',
+                  filter: 'contrast(1.1) saturate(1.1)'
+                }}
+              />
+            </div>
+
+            {/* NLP & Advanced Content Analysis */}
+            <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden">
+              <img 
+                src={dashboardNlpAnalysis}
+                alt="NLP & Advanced Content Analysis Dashboard - Semantic understanding, sentiment analysis, audio features, and visual composition metrics across TikTok, YouTube, and Instagram platforms"
+                className="w-full h-auto cursor-pointer hover:opacity-95 transition-opacity"
+                onDoubleClick={() => setSelectedImage(dashboardNlpAnalysis)}
+                style={{ 
+                  imageRendering: 'auto',
+                  filter: 'contrast(1.1) saturate(1.1)'
+                }}
+              />
+            </div>
+
+            {/* Cross-Platform Insights */}
+            <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden">
+              <img 
+                src={dashboardInsights}
+                alt="Cross-Platform Insights Dashboard - Platform-specific optimization strategies, universal vs platform-specific content approaches, and recommendation mechanism differences for TikTok, YouTube Shorts, and Instagram Reels"
+                className="w-full h-auto cursor-pointer hover:opacity-95 transition-opacity"
+                onDoubleClick={() => setSelectedImage(dashboardInsights)}
+                style={{ 
+                  imageRendering: 'auto',
+                  filter: 'contrast(1.1) saturate(1.1)'
+                }}
+              />
             </div>
           </div>
+
+          {/* Image Preview Dialog */}
+          <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+            <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 overflow-auto">
+              <div className="relative">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="absolute top-4 right-4 z-10 bg-background/80 hover:bg-background"
+                  onClick={() => setSelectedImage(null)}
+                >
+                  <X className="w-6 h-6" />
+                </Button>
+                {selectedImage && (
+                  <img 
+                    src={selectedImage} 
+                    alt="Enlarged dashboard view" 
+                    className="w-full h-auto"
+                    style={{ 
+                      imageRendering: 'auto',
+                      filter: 'contrast(1.1) saturate(1.1)'
+                    }}
+                  />
+                )}
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </section>
 
