@@ -8,6 +8,7 @@ import MetricsModule from "@/components/MetricsModule";
 import showcaseImage from "@/assets/voice-assistant-showcase.png";
 import knowledgeGraph1 from "@/assets/knowledge-graph-1.png";
 import knowledgeGraph2 from "@/assets/knowledge-graph-2.png";
+import researchDocumentView from "@/assets/research-document-view.png";
 import { useState } from "react";
 
 const VoiceResearchAssistant = () => {
@@ -212,6 +213,27 @@ const VoiceResearchAssistant = () => {
                   height={1400}
                   className="w-full h-auto cursor-pointer"
                   onDoubleClick={() => setSelectedImage(knowledgeGraph2)}
+                  style={{ 
+                    imageRendering: 'auto',
+                    filter: 'contrast(1.15) saturate(1.15) brightness(1.05)',
+                    WebkitBackfaceVisibility: 'hidden',
+                    backfaceVisibility: 'hidden',
+                    transform: 'translateZ(0)'
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Research Document View */}
+            <div className="space-y-8">
+              <div className="relative bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto">
+                <img 
+                  src={researchDocumentView} 
+                  alt="Research Assistant Document View showing AI-powered thesis analysis on healthcare systems with markdown notes, AI assistant chat, and comprehensive document analysis features"
+                  width={2560}
+                  height={1400}
+                  className="w-full h-auto cursor-pointer"
+                  onDoubleClick={() => setSelectedImage(researchDocumentView)}
                   style={{ 
                     imageRendering: 'auto',
                     filter: 'contrast(1.15) saturate(1.15) brightness(1.05)',
