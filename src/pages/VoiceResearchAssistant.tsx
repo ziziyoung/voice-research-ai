@@ -163,6 +163,8 @@ const VoiceResearchAssistant = () => {
                 <img 
                   src={showcaseImage} 
                   alt="Voice Research Assistant Platform Interface showing Document Management, AI Indexes, and Research Analysis features"
+                  width={2560}
+                  height={1400}
                   className="w-full h-auto"
                   style={{ 
                     imageRendering: 'auto',
@@ -181,6 +183,8 @@ const VoiceResearchAssistant = () => {
                 <img 
                   src={knowledgeGraph1} 
                   alt="Knowledge Graph visualization showing Computer Vision research connections including Deep Learning, CNN Architectures, Object Detection, and Image Segmentation"
+                  width={2560}
+                  height={1400}
                   className="w-full h-auto"
                   style={{ 
                     imageRendering: 'auto',
@@ -199,6 +203,8 @@ const VoiceResearchAssistant = () => {
                 <img 
                   src={knowledgeGraph2} 
                   alt="Knowledge Graph visualization showing Natural Language Processing research connections including Attention Mechanisms, Transformers, BERT, and GPT Architecture"
+                  width={2560}
+                  height={1400}
                   className="w-full h-auto"
                   style={{ 
                     imageRendering: 'auto',
