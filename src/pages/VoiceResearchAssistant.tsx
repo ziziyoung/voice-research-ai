@@ -1,14 +1,17 @@
-import { ArrowLeft, Smartphone, Monitor, Users, Target, Calendar, TrendingUp, Mic, MessageSquare, FileText, BarChart3, Clock, Zap, Shield, Database, Play } from "lucide-react";
+import { ArrowLeft, Smartphone, Monitor, Users, Target, Calendar, TrendingUp, Mic, MessageSquare, FileText, BarChart3, Clock, Zap, Shield, Database, Play, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import MetricsModule from "@/components/MetricsModule";
 import showcaseImage from "@/assets/voice-assistant-showcase.png";
 import knowledgeGraph1 from "@/assets/knowledge-graph-1.png";
 import knowledgeGraph2 from "@/assets/knowledge-graph-2.png";
+import { useState } from "react";
 
 const VoiceResearchAssistant = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const performanceMetrics = [
     { 
       label: "User Engagement", 
@@ -165,7 +168,8 @@ const VoiceResearchAssistant = () => {
                   alt="Voice Research Assistant Platform Interface showing Document Management, AI Indexes, and Research Analysis features"
                   width={2560}
                   height={1400}
-                  className="w-full h-auto"
+                  className="w-full h-auto cursor-pointer"
+                  onDoubleClick={() => setSelectedImage(showcaseImage)}
                   style={{ 
                     imageRendering: 'auto',
                     filter: 'contrast(1.15) saturate(1.15) brightness(1.05)',
@@ -185,7 +189,8 @@ const VoiceResearchAssistant = () => {
                   alt="Knowledge Graph visualization showing Computer Vision research connections including Deep Learning, CNN Architectures, Object Detection, and Image Segmentation"
                   width={2560}
                   height={1400}
-                  className="w-full h-auto"
+                  className="w-full h-auto cursor-pointer"
+                  onDoubleClick={() => setSelectedImage(knowledgeGraph1)}
                   style={{ 
                     imageRendering: 'auto',
                     filter: 'contrast(1.15) saturate(1.15) brightness(1.05)',
@@ -205,7 +210,8 @@ const VoiceResearchAssistant = () => {
                   alt="Knowledge Graph visualization showing Natural Language Processing research connections including Attention Mechanisms, Transformers, BERT, and GPT Architecture"
                   width={2560}
                   height={1400}
-                  className="w-full h-auto"
+                  className="w-full h-auto cursor-pointer"
+                  onDoubleClick={() => setSelectedImage(knowledgeGraph2)}
                   style={{ 
                     imageRendering: 'auto',
                     filter: 'contrast(1.15) saturate(1.15) brightness(1.05)',
@@ -217,6 +223,33 @@ const VoiceResearchAssistant = () => {
               </div>
             </div>
           </div>
+
+          {/* Image Preview Dialog */}
+          <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+            <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 overflow-auto">
+              <div className="relative">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="absolute top-4 right-4 z-10 bg-background/80 hover:bg-background"
+                  onClick={() => setSelectedImage(null)}
+                >
+                  <X className="w-6 h-6" />
+                </Button>
+                {selectedImage && (
+                  <img 
+                    src={selectedImage} 
+                    alt="Enlarged view" 
+                    className="w-full h-auto"
+                    style={{ 
+                      imageRendering: 'auto',
+                      filter: 'contrast(1.15) saturate(1.15) brightness(1.05)'
+                    }}
+                  />
+                )}
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </section>
 
