@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import MetricsModule from "@/components/MetricsModule";
+import showcaseImage from "@/assets/voice-assistant-showcase.png";
 
 const VoiceResearchAssistant = () => {
   const performanceMetrics = [
@@ -154,22 +155,16 @@ const VoiceResearchAssistant = () => {
           </h2>
           
           <div className="space-y-16">
-            {/* Web Demo - Row 1 */}
+            {/* Platform Showcase Image */}
             <div className="space-y-8">
-              
-              <div className="relative h-[600px] bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-24 h-24 mx-auto bg-muted rounded-full flex items-center justify-center">
-                    <Monitor className="w-12 h-12 text-muted-foreground" />
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="text-xl font-medium text-muted-foreground">Video Content Placeholder</h4>
-                    <p className="text-sm text-muted-foreground/80">Ready for demo video integration</p>
-                  </div>
-                </div>
+              <div className="relative bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto">
+                <img 
+                  src={showcaseImage} 
+                  alt="Voice Research Assistant Platform Interface showing Document Management, AI Indexes, and Research Analysis features"
+                  className="w-full h-auto object-contain"
+                />
               </div>
             </div>
-
           </div>
         </div>
       </section>
