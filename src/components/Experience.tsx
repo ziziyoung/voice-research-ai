@@ -4,6 +4,7 @@ import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import voiceResearchImg from "@/assets/voice-research-assistant.jpg";
 import shortVideoImg from "@/assets/short-video-analyst.jpg";
+import pastWorkImg from "@/assets/past-work-overview.jpg";
 
 const experiences = [
   {
@@ -67,7 +68,7 @@ const projects = [
     description: "Comprehensive showcase of previous GenAI and product management work",
     tech: ["Portfolio", "Case Studies", "Product Management", "GenAI"],
     period: "2015 - Present",
-    image: shortVideoImg,
+    image: pastWorkImg,
     link: "/past-work-overview"
   }
 ];
