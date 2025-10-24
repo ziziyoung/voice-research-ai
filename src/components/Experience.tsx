@@ -83,7 +83,7 @@ const Projects = () => {
           Recent AI/ML projects showcasing expertise in generative AI, voice interfaces, and competitive intelligence
         </p>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <Link key={index} to={project.link} className="block group">
               <Card className="tech-card overflow-hidden h-full hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
