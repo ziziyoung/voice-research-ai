@@ -6,8 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import MetricsModule from "@/components/MetricsModule";
 import showcaseImage from "@/assets/voice-assistant-showcase.png";
-import knowledgeGraph1 from "@/assets/knowledge-graph-1.png";
-import knowledgeGraph2 from "@/assets/knowledge-graph-2.png";
+import knowledgeGraphPortfolio from "@/assets/knowledge-graph-portfolio.png";
 import researchDocumentView from "@/assets/research-document-view.png";
 import { useState } from "react";
 
@@ -180,37 +179,16 @@ const VoiceResearchAssistant = () => {
               </div>
             </div>
 
-            {/* Knowledge Graph Showcase 1 */}
+            {/* Knowledge Graph Portfolio */}
             <div className="space-y-8">
               <div className="relative bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto">
                 <img 
-                  src={knowledgeGraph1} 
-                  alt="Knowledge Graph visualization showing Computer Vision research connections including Deep Learning, CNN Architectures, Object Detection, and Image Segmentation"
-                  width={2560}
-                  height={1400}
+                  src={knowledgeGraphPortfolio} 
+                  alt="Knowledge Graph Portfolio - Dual network visualization showcasing interconnected research topics with purple-blue and green-blue gradient themes"
+                  width={1920}
+                  height={1080}
                   className="w-full h-auto cursor-pointer"
-                  onDoubleClick={() => setSelectedImage(knowledgeGraph1)}
-                  style={{ 
-                    imageRendering: 'auto',
-                    filter: 'contrast(1.15) saturate(1.15) brightness(1.05)',
-                    WebkitBackfaceVisibility: 'hidden',
-                    backfaceVisibility: 'hidden',
-                    transform: 'translateZ(0)'
-                  }}
-                />
-              </div>
-            </div>
-
-            {/* Knowledge Graph Showcase 2 */}
-            <div className="space-y-8">
-              <div className="relative bg-card rounded-xl border border-border shadow-lg overflow-hidden max-w-6xl mx-auto">
-                <img 
-                  src={knowledgeGraph2} 
-                  alt="Knowledge Graph visualization showing Natural Language Processing research connections including Attention Mechanisms, Transformers, BERT, and GPT Architecture"
-                  width={2560}
-                  height={1400}
-                  className="w-full h-auto cursor-pointer"
-                  onDoubleClick={() => setSelectedImage(knowledgeGraph2)}
+                  onDoubleClick={() => setSelectedImage(knowledgeGraphPortfolio)}
                   style={{ 
                     imageRendering: 'auto',
                     filter: 'contrast(1.15) saturate(1.15) brightness(1.05)',
