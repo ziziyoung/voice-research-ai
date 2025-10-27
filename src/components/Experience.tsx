@@ -66,7 +66,7 @@ const projects = [
   {
     title: "Past Work Overview",
     description: "Comprehensive showcase of previous GenAI and product management work",
-    tech: ["Portfolio", "Case Studies", "Product Management", "GenAI"],
+    tech: ["Portfolio", "Case Studies", "Product Management"],
     period: "2015-2022",
     image: pastWorkImg,
     link: "/past-work-overview"
