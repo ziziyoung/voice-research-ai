@@ -50,7 +50,7 @@ const projects = [
   {
     title: "MindFlow Research Assistant",
     description: "Multi-modal RAG + voice interaction for research workflows",
-    tech: ["Voice Mode", "RAG", "Knowledge Graph"],
+    tech: ["RAG", "Knowledge Graph"],
     period: "Present",
     image: voiceResearchImg,
     link: "/voice-research-assistant"

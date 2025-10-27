@@ -133,7 +133,6 @@ const VoiceResearchAssistant = () => {
               Revolutionary AI-powered research platform combining multi-modal RAG with intuitive voice interaction for next-generation research workflows.
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <Badge variant="secondary" className="tech-card">Voice Mode</Badge>
               <Badge variant="secondary" className="tech-card">Multi-modal RAG</Badge>
               <Badge variant="secondary" className="tech-card">Real-time Analytics</Badge>
             </div>
