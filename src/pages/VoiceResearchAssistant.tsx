@@ -117,7 +117,7 @@ const VoiceResearchAssistant = () => {
               Back to Portfolio
             </Link>
             <div className="h-4 w-px bg-border" />
-            <h1 className="text-lg font-semibold">Voice-First Research Assistant</h1>
+            <h1 className="text-lg font-semibold">MindFlow Research Assistant</h1>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ const VoiceResearchAssistant = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">
-              <span className="gradient-text">Voice-First Research Assistant</span>
+              <span className="gradient-text">MindFlow Research Assistant</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Revolutionary AI-powered research platform combining multi-modal RAG with intuitive voice interaction for next-generation research workflows.

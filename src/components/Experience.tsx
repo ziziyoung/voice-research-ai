@@ -48,7 +48,7 @@ const experiences = [
 
 const projects = [
   {
-    title: "Voice-First Research Assistant",
+    title: "MindFlow Research Assistant",
     description: "Multi-modal RAG + voice interaction for research workflows",
     tech: ["Voice Mode", "RAG", "Knowledge Graph"],
     period: "Present",
