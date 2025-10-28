@@ -6,67 +6,25 @@ import { Link } from "react-router-dom";
 import pastWorkOverview from "@/assets/past-work-overview.jpg";
 
 const PastWork = () => {
-  const projects = [
+  const showcaseItems = [
     {
       id: 1,
-      title: "AI Research Platform",
-      description: "A comprehensive research platform integrating NLP analysis, knowledge graphs, and voice interaction for enhanced research workflows.",
-      category: "AI/ML",
-      tags: ["NLP", "Knowledge Graph", "Voice AI"],
-      period: "2024",
+      title: "Featured Project Showcase 1",
+      description: "Large showcase area for displaying project images, videos, or interactive demos. This space is designed to highlight your most important work.",
       image: pastWorkOverview,
-      link: "/voice-research-assistant"
     },
     {
       id: 2,
-      title: "Short Video Analytics Lab",
-      description: "Advanced analytics platform for short-form video content analysis with multi-modal data processing capabilities.",
-      category: "Data Analytics",
-      tags: ["Video Analysis", "ML", "Data Visualization"],
-      period: "2024",
-      image: null, // Placeholder for future image
-      link: "/short-video-analyst-lab"
+      title: "Featured Project Showcase 2",
+      description: "Another prominent display area for showcasing visual content, case studies, or project demonstrations.",
+      image: null,
     },
     {
       id: 3,
-      title: "Project Title 3",
-      description: "Description of your third project. This could be a web application, mobile app, or any other work you want to showcase.",
-      category: "Web Development",
-      tags: ["React", "TypeScript", "UI/UX"],
-      period: "2023",
-      image: null, // Placeholder for future image
-      link: "#"
+      title: "Featured Project Showcase 3",
+      description: "Additional showcase space for presenting portfolio work, videos, or detailed project breakdowns.",
+      image: null,
     },
-    {
-      id: 4,
-      title: "Project Title 4",
-      description: "Description of your fourth project. Highlight the key features and technologies used in this project.",
-      category: "Backend Systems",
-      tags: ["API", "Database", "Architecture"],
-      period: "2023",
-      image: null, // Placeholder for future image
-      link: "#"
-    },
-    {
-      id: 5,
-      title: "Project Title 5",
-      description: "Description of your fifth project. Explain what problems it solves and what makes it unique.",
-      category: "Mobile Development",
-      tags: ["Mobile", "Cross-platform", "UI"],
-      period: "2023",
-      image: null, // Placeholder for future image
-      link: "#"
-    },
-    {
-      id: 6,
-      title: "Project Title 6",
-      description: "Description of your sixth project. Share the impact and results achieved through this work.",
-      category: "AI/ML",
-      tags: ["Machine Learning", "Computer Vision", "AI"],
-      period: "2022",
-      image: null, // Placeholder for future image
-      link: "#"
-    }
   ];
 
   return (
@@ -98,86 +56,67 @@ const PastWork = () => {
         </div>
       </section>
 
-      {/* Projects Grid */}
+      {/* Large Showcase Frames */}
       <section className="py-12 px-4">
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <Card 
-                key={project.id}
-                className="group overflow-hidden hover:shadow-lg transition-all duration-300 border-border/50 bg-card"
-              >
-                {/* Image Container */}
-                <div className="relative aspect-video bg-muted overflow-hidden">
-                  {project.image ? (
+        <div className="container mx-auto max-w-7xl space-y-16">
+          {showcaseItems.map((item) => (
+            <Card 
+              key={item.id}
+              className="overflow-hidden border-border/50 bg-card hover:shadow-2xl transition-all duration-500"
+            >
+              <div className="grid md:grid-cols-2 gap-0">
+                {/* Large Image/Video Frame */}
+                <div className="relative aspect-video md:aspect-square bg-muted overflow-hidden">
+                  {item.image ? (
                     <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-full object-cover"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
-                      <div className="text-center space-y-2">
-                        <div className="w-16 h-16 mx-auto rounded-full bg-primary/20 flex items-center justify-center">
-                          <Tag className="w-8 h-8 text-primary" />
+                      <div className="text-center space-y-4 p-8">
+                        <div className="w-24 h-24 mx-auto rounded-full bg-primary/20 flex items-center justify-center">
+                          <Tag className="w-12 h-12 text-primary" />
                         </div>
-                        <p className="text-sm text-muted-foreground">Image Placeholder</p>
+                        <div className="space-y-2">
+                          <p className="text-lg font-medium">Image/Video Showcase Frame</p>
+                          <p className="text-sm text-muted-foreground max-w-xs">
+                            This large frame is designed to display project images, videos, or interactive demos
+                          </p>
+                        </div>
                       </div>
                     </div>
                   )}
-                  
-                  {/* Category Badge */}
-                  <div className="absolute top-3 left-3">
-                    <Badge variant="secondary" className="bg-background/90 backdrop-blur">
-                      {project.category}
-                    </Badge>
-                  </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-6 space-y-4">
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
-                      {project.title}
+                {/* Content Area */}
+                <div className="p-8 md:p-12 flex flex-col justify-center space-y-6">
+                  <div className="space-y-4">
+                    <Badge variant="secondary" className="w-fit">
+                      Featured Work
+                    </Badge>
+                    <h3 className="text-3xl md:text-4xl font-bold">
+                      {item.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-3">
-                      {project.description}
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      {item.description}
                     </p>
                   </div>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-xs">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-
-                  {/* Footer */}
-                  <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                    <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                      <Calendar className="h-3 w-3" />
-                      {project.period}
-                    </div>
-                    
-                    {project.link !== "#" ? (
-                      <Link to={project.link}>
-                        <Button variant="ghost" size="sm" className="gap-2">
-                          View Details
-                          <ExternalLink className="h-3 w-3" />
-                        </Button>
-                      </Link>
-                    ) : (
-                      <Button variant="ghost" size="sm" disabled className="gap-2">
-                        Coming Soon
-                      </Button>
-                    )}
+                  
+                  <div className="flex gap-3">
+                    <Button size="lg" className="gap-2">
+                      View Project
+                      <ExternalLink className="h-4 w-4" />
+                    </Button>
+                    <Button size="lg" variant="outline">
+                      Learn More
+                    </Button>
                   </div>
                 </div>
-              </Card>
-            ))}
-          </div>
+              </div>
+            </Card>
+          ))}
         </div>
       </section>
 
