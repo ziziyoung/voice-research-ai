@@ -69,7 +69,7 @@ const projects = [
     tech: ["Portfolio", "Case Studies", "Product Management"],
     period: "2015-2022",
     image: pastWorkImg,
-    link: "/past-work-overview"
+    link: "/past-work"
   }
 ];
 
