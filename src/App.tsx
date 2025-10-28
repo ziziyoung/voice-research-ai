@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import VoiceResearchAssistant from "./pages/VoiceResearchAssistant";
 import ShortVideoAnalystLab from "./pages/ShortVideoAnalystLab";
+import PastWork from "./pages/PastWork";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/voice-research-assistant" element={<VoiceResearchAssistant />} />
           <Route path="/short-video-analyst-lab" element={<ShortVideoAnalystLab />} />
+          <Route path="/past-work" element={<PastWork />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
