@@ -64,48 +64,21 @@ const PastWork = () => {
               key={item.id}
               className="overflow-hidden border-border/50 bg-card hover:shadow-2xl transition-all duration-500"
             >
-              <div className="grid md:grid-cols-2 gap-0">
-                {/* Large Image/Video Frame */}
-                <div className="relative aspect-video md:aspect-square bg-muted overflow-hidden">
-                  {item.image ? (
-                    <img 
-                      src={item.image} 
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
-                      <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
-                        <Tag className="w-12 h-12 text-primary" />
-                      </div>
+              {/* Large Image/Video Frame */}
+              <div className="relative aspect-video bg-muted overflow-hidden">
+                {item.image ? (
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
+                    <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
+                      <Tag className="w-12 h-12 text-primary" />
                     </div>
-                  )}
-                </div>
-
-                {/* Content Area */}
-                <div className="p-8 md:p-12 flex flex-col justify-center space-y-6">
-                  <div className="space-y-4">
-                    <Badge variant="secondary" className="w-fit">
-                      Featured Work
-                    </Badge>
-                    <h3 className="text-3xl md:text-4xl font-bold">
-                      {item.title}
-                    </h3>
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
                   </div>
-                  
-                  <div className="flex gap-3">
-                    <Button size="lg" className="gap-2">
-                      View Project
-                      <ExternalLink className="h-4 w-4" />
-                    </Button>
-                    <Button size="lg" variant="outline">
-                      Learn More
-                    </Button>
-                  </div>
-                </div>
+                )}
               </div>
             </Card>
           ))}
