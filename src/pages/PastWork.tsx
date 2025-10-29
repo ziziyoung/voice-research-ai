@@ -75,16 +75,8 @@ const PastWork = () => {
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
-                      <div className="text-center space-y-4 p-8">
-                        <div className="w-24 h-24 mx-auto rounded-full bg-primary/20 flex items-center justify-center">
-                          <Tag className="w-12 h-12 text-primary" />
-                        </div>
-                        <div className="space-y-2">
-                          <p className="text-lg font-medium">Image/Video Showcase Frame</p>
-                          <p className="text-sm text-muted-foreground max-w-xs">
-                            This large frame is designed to display project images, videos, or interactive demos
-                          </p>
-                        </div>
+                      <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
+                        <Tag className="w-12 h-12 text-primary" />
                       </div>
                     </div>
                   )}
