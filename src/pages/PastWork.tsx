@@ -85,22 +85,6 @@ const PastWork = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Interested in Working Together?
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Let's discuss how we can collaborate on your next project.
-          </p>
-          <Link to="/">
-            <Button size="lg" className="gap-2">
-              Get in Touch
-            </Button>
-          </Link>
-        </div>
-      </section>
     </div>
   );
 };
