@@ -83,7 +83,7 @@ const PastWork = () => {
                           key={imgIndex}
                           src={image} 
                           alt={`${project.title} screenshot ${imgIndex + 1}`}
-                          className="w-full h-auto object-contain rounded-lg shadow-lg"
+                          className="w-full h-full object-cover rounded-lg shadow-lg"
                         />
                       ))}
                     </div>
