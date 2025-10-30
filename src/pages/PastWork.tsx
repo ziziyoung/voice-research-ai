@@ -101,7 +101,7 @@ const PastWork = () => {
                               <img 
                                 src={image} 
                                 alt={`${project.title} screenshot ${imgIndex + 1}`}
-                                className="w-full h-full object-cover"
+                                className={`w-full h-full ${imgIndex === project.images.length - 1 ? 'object-contain' : 'object-cover'}`}
                               />
                             </CarouselItem>
                           ))}
