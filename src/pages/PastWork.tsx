@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Calendar, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
 import mobileDesignerScreenshot from "@/assets/cyclone-mobile-designer.png";
+import aiResearchPlatform from "@/assets/ai-research-platform.png";
 
 const PastWork = () => {
   const projects = [
@@ -20,7 +21,7 @@ const PastWork = () => {
       id: 2,
       title: "AI Research Platform",
       description: "Advanced AI-powered research platform with natural language processing capabilities. Enables efficient data analysis and insight generation.",
-      images: [],
+      images: [aiResearchPlatform],
       technologies: ["Python", "TensorFlow", "React", "PostgreSQL"],
       date: "2024",
       link: "#",
@@ -75,20 +76,20 @@ const PastWork = () => {
             >
               <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? 'md:grid-flow-dense' : ''}`}>
                 {/* Images Section */}
-                <div className={`bg-gradient-to-br from-pink-100 via-pink-50 to-purple-50 dark:from-pink-900/20 dark:via-purple-900/10 dark:to-pink-800/10 p-8 flex items-center justify-center ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
+                <div className={`bg-gradient-to-br from-pink-100 via-pink-50 to-purple-50 dark:from-pink-900/20 dark:via-purple-900/10 dark:to-pink-800/10 ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
                   {project.images.length > 0 ? (
-                    <div className="grid grid-cols-1 gap-4 w-full">
+                    <div className="w-full h-full">
                       {project.images.map((image, imgIndex) => (
                         <img 
                           key={imgIndex}
                           src={image} 
                           alt={`${project.title} screenshot ${imgIndex + 1}`}
-                          className="w-full h-auto object-contain rounded-lg shadow-lg"
+                          className="w-full h-full object-cover"
                         />
                       ))}
                     </div>
                   ) : (
-                    <div className="w-full aspect-video flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
+                    <div className="w-full h-full flex items-center justify-center">
                       <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
                         <Tag className="w-10 h-10 text-primary" />
                       </div>
