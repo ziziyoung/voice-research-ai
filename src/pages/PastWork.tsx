@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Calendar, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
-import mobileDesignerScreenshot from "@/assets/mobile-designer-screenshot.png";
+import mobileDesignerScreenshot from "@/assets/cyclone-mobile-designer.png";
 
 const PastWork = () => {
   const projects = [
