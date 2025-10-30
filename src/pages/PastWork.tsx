@@ -3,6 +3,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Calendar, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import mobileDesignerScreenshot from "@/assets/mobile-designer-screenshot.png";
 
 const PastWork = () => {
@@ -77,16 +84,29 @@ const PastWork = () => {
                 {/* Images Section */}
                 <div className={`bg-muted p-8 flex items-center justify-center ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
                   {project.images.length > 0 ? (
-                    <div className="grid grid-cols-1 gap-4 w-full">
-                      {project.images.map((image, imgIndex) => (
-                        <img 
-                          key={imgIndex}
-                          src={image} 
-                          alt={`${project.title} screenshot ${imgIndex + 1}`}
-                          className="w-full h-auto object-contain rounded-lg shadow-lg"
-                        />
-                      ))}
-                    </div>
+                    project.images.length === 1 ? (
+                      <img 
+                        src={project.images[0]} 
+                        alt={`${project.title} screenshot`}
+                        className="w-full h-auto object-contain rounded-lg shadow-lg"
+                      />
+                    ) : (
+                      <Carousel className="w-full max-w-xl mx-auto">
+                        <CarouselContent>
+                          {project.images.map((image, imgIndex) => (
+                            <CarouselItem key={imgIndex}>
+                              <img 
+                                src={image} 
+                                alt={`${project.title} screenshot ${imgIndex + 1}`}
+                                className="w-full h-auto object-contain rounded-lg shadow-lg"
+                              />
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="left-2" />
+                        <CarouselNext className="right-2" />
+                      </Carousel>
+                    )
                   ) : (
                     <div className="w-full aspect-video flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
                       <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
