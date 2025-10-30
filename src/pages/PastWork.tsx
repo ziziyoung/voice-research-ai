@@ -77,7 +77,7 @@ const PastWork = () => {
                 {/* Images Section */}
                 <div className={`bg-gradient-to-br from-pink-100 via-pink-50 to-purple-50 dark:from-pink-900/20 dark:via-purple-900/10 dark:to-pink-800/10 flex items-center justify-center ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
                   {project.images.length > 0 ? (
-                    <div className="grid grid-cols-1 gap-4 w-full">
+                    <div className="grid grid-cols-1 w-full h-full">
                       {project.images.map((image, imgIndex) => (
                         <img 
                           key={imgIndex}
