@@ -75,20 +75,20 @@ const PastWork = () => {
             >
               <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? 'md:grid-flow-dense' : ''}`}>
                 {/* Images Section */}
-                <div className={`bg-gradient-to-br from-pink-100 via-pink-50 to-purple-50 dark:from-pink-900/20 dark:via-purple-900/10 dark:to-pink-800/10 ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
+                <div className={`bg-gradient-to-br from-pink-100 via-pink-50 to-purple-50 dark:from-pink-900/20 dark:via-purple-900/10 dark:to-pink-800/10 flex items-center justify-center ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
                   {project.images.length > 0 ? (
-                    <div className="w-full h-full">
+                    <div className="grid grid-cols-1 w-full h-full">
                       {project.images.map((image, imgIndex) => (
                         <img 
                           key={imgIndex}
                           src={image} 
                           alt={`${project.title} screenshot ${imgIndex + 1}`}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover rounded-lg shadow-lg"
                         />
                       ))}
                     </div>
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center">
+                    <div className="w-full aspect-video flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
                       <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
                         <Tag className="w-10 h-10 text-primary" />
                       </div>
