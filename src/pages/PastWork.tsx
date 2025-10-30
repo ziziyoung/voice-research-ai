@@ -51,6 +51,15 @@ const PastWork = () => {
       date: "2023",
       link: "#",
     },
+    {
+      id: 4,
+      title: "New Project",
+      description: "Description for the new project. Add your project details here including key features and achievements.",
+      images: [],
+      technologies: ["React", "TypeScript", "Node.js"],
+      date: "2024",
+      link: "#",
+    },
   ];
 
   return (
