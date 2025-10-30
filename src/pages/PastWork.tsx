@@ -3,8 +3,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Calendar, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import mobileDesignerScreenshot from "@/assets/cyclone-mobile-designer.png";
-import aiResearchPlatform from "@/assets/ai-research-platform.png";
+import aiPlatform1 from "@/assets/ai-platform-1.png";
+import aiPlatform2 from "@/assets/ai-platform-2.png";
+import aiPlatform3 from "@/assets/ai-platform-3.png";
+import aiPlatform4 from "@/assets/ai-platform-4.png";
 
 const PastWork = () => {
   const projects = [
@@ -21,7 +26,7 @@ const PastWork = () => {
       id: 2,
       title: "AI Research Platform",
       description: "Advanced AI-powered research platform with natural language processing capabilities. Enables efficient data analysis and insight generation.",
-      images: [aiResearchPlatform],
+      images: [aiPlatform1, aiPlatform2, aiPlatform3, aiPlatform4],
       technologies: ["Python", "TensorFlow", "React", "PostgreSQL"],
       date: "2024",
       link: "#",
@@ -78,16 +83,39 @@ const PastWork = () => {
                 {/* Images Section */}
                 <div className={`bg-gradient-to-br from-pink-100 via-pink-50 to-purple-50 dark:from-pink-900/20 dark:via-purple-900/10 dark:to-pink-800/10 ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
                   {project.images.length > 0 ? (
-                    <div className="w-full h-full">
-                      {project.images.map((image, imgIndex) => (
+                    project.images.length > 1 ? (
+                      <Carousel 
+                        className="w-full h-full"
+                        plugins={[
+                          Autoplay({
+                            delay: 3000,
+                          }),
+                        ]}
+                        opts={{
+                          loop: true,
+                        }}
+                      >
+                        <CarouselContent className="h-full">
+                          {project.images.map((image, imgIndex) => (
+                            <CarouselItem key={imgIndex} className="h-full">
+                              <img 
+                                src={image} 
+                                alt={`${project.title} screenshot ${imgIndex + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                      </Carousel>
+                    ) : (
+                      <div className="w-full h-full">
                         <img 
-                          key={imgIndex}
-                          src={image} 
-                          alt={`${project.title} screenshot ${imgIndex + 1}`}
+                          src={project.images[0]} 
+                          alt={`${project.title} screenshot`}
                           className="w-full h-full object-cover"
                         />
-                      ))}
-                    </div>
+                      </div>
+                    )
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
                       <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
