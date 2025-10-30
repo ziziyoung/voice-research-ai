@@ -12,6 +12,9 @@ import aiPlatform3 from "@/assets/ai-platform-3.png";
 import aiPlatform4 from "@/assets/ai-platform-4.png";
 import aiPlatform5 from "@/assets/ai-platform-5.png";
 import aiPlatform6 from "@/assets/ai-platform-6.png";
+import voiceAssistant1 from "@/assets/voice-assistant-1.png";
+import voiceAssistant2 from "@/assets/voice-assistant-2.png";
+import voiceAssistant3 from "@/assets/voice-assistant-3.png";
 
 const PastWork = () => {
   const projects = [
@@ -37,7 +40,7 @@ const PastWork = () => {
       id: 3,
       title: "Voice Assistant System",
       description: "Intelligent voice assistant with multi-language support and contextual understanding. Integrated with various APIs for enhanced functionality.",
-      images: [],
+      images: [voiceAssistant1, voiceAssistant2, voiceAssistant3],
       technologies: ["Node.js", "WebSockets", "AWS", "MongoDB"],
       date: "2023",
       link: "#",
