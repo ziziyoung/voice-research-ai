@@ -65,20 +65,24 @@ const PastWork = () => {
               key={item.id}
               className="overflow-hidden border-border/50 bg-card hover:shadow-2xl transition-all duration-500"
             >
-              {/* Large Image/Video Frame */}
-              <div className="relative bg-muted overflow-hidden">
+              {/* Image Display */}
+              <div className="relative bg-muted overflow-hidden p-8">
                 {item.id === 1 ? (
-                  <div className="flex gap-4 p-4 justify-center items-center">
-                    <img 
-                      src={mobileDesignerScreenshot} 
-                      alt="Mobile Designer Screenshot 1"
-                      className="max-w-none"
-                    />
-                    <img 
-                      src={mobileDesignerScreenshot2} 
-                      alt="Mobile Designer Screenshot 2"
-                      className="max-w-none"
-                    />
+                  <div className="grid grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <div className="aspect-[9/16] overflow-hidden rounded-lg shadow-lg">
+                      <img 
+                        src={mobileDesignerScreenshot} 
+                        alt="Mobile Designer Screenshot 1"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="aspect-[9/16] overflow-hidden rounded-lg shadow-lg">
+                      <img 
+                        src={mobileDesignerScreenshot2} 
+                        alt="Mobile Designer Screenshot 2"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
                 ) : item.image ? (
                   <div className="aspect-video">
@@ -89,7 +93,7 @@ const PastWork = () => {
                     />
                   </div>
                 ) : (
-                  <div className="aspect-video w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
+                  <div className="aspect-video flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
                     <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
                       <Tag className="w-12 h-12 text-primary" />
                     </div>
