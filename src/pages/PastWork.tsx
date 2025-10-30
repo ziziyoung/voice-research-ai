@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Calendar, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
-import pastWorkOverview from "@/assets/past-work-overview.jpg";
+import mobileDesignerScreenshot from "@/assets/mobile-designer-screenshot.png";
 
 const PastWork = () => {
   const showcaseItems = [
@@ -11,7 +11,7 @@ const PastWork = () => {
       id: 1,
       title: "Featured Project Showcase 1",
       description: "Large showcase area for displaying project images, videos, or interactive demos. This space is designed to highlight your most important work.",
-      image: pastWorkOverview,
+      image: mobileDesignerScreenshot,
     },
     {
       id: 2,
