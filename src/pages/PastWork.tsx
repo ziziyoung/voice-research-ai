@@ -12,12 +12,6 @@ import aiPlatform3 from "@/assets/ai-platform-3.png";
 import aiPlatform4 from "@/assets/ai-platform-4.png";
 import aiPlatform5 from "@/assets/ai-platform-5.png";
 import aiPlatform6 from "@/assets/ai-platform-6.png";
-import aiPlatform7 from "@/assets/ai-platform-7.png";
-import aiPlatform8 from "@/assets/ai-platform-8.png";
-import aiPlatform9 from "@/assets/ai-platform-9.png";
-import aiPlatform10 from "@/assets/ai-platform-10.png";
-import aiPlatform11 from "@/assets/ai-platform-11.png";
-import aiPlatform12 from "@/assets/ai-platform-12.png";
 
 const PastWork = () => {
   const projects = [
@@ -34,7 +28,7 @@ const PastWork = () => {
       id: 2,
       title: "AI Research Platform",
       description: "Advanced AI-powered research platform with natural language processing capabilities. Enables efficient data analysis and insight generation.",
-      images: [aiPlatform1, aiPlatform2, aiPlatform3, aiPlatform4, aiPlatform5, aiPlatform6, aiPlatform7, aiPlatform8, aiPlatform9, aiPlatform10, aiPlatform11, aiPlatform12],
+      images: [aiPlatform1, aiPlatform2, aiPlatform3, aiPlatform4, aiPlatform5, aiPlatform6],
       technologies: ["Python", "TensorFlow", "React", "PostgreSQL"],
       date: "2024",
       link: "#",
