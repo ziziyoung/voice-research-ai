@@ -6,24 +6,33 @@ import { Link } from "react-router-dom";
 import mobileDesignerScreenshot from "@/assets/mobile-designer-screenshot.png";
 
 const PastWork = () => {
-  const showcaseItems = [
+  const projects = [
     {
       id: 1,
-      title: "Featured Project Showcase 1",
-      description: "Large showcase area for displaying project images, videos, or interactive demos. This space is designed to highlight your most important work.",
-      image: mobileDesignerScreenshot,
+      title: "Mobile Designer App",
+      description: "A comprehensive mobile design application featuring intuitive UI/UX tools and real-time collaboration capabilities. Built with modern frameworks to deliver seamless user experience across devices.",
+      images: [mobileDesignerScreenshot],
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
+      date: "2024",
+      link: "#",
     },
     {
       id: 2,
-      title: "Featured Project Showcase 2",
-      description: "Another prominent display area for showcasing visual content, case studies, or project demonstrations.",
-      image: null,
+      title: "AI Research Platform",
+      description: "Advanced AI-powered research platform with natural language processing capabilities. Enables efficient data analysis and insight generation.",
+      images: [],
+      technologies: ["Python", "TensorFlow", "React", "PostgreSQL"],
+      date: "2024",
+      link: "#",
     },
     {
       id: 3,
-      title: "Featured Project Showcase 3",
-      description: "Additional showcase space for presenting portfolio work, videos, or detailed project breakdowns.",
-      image: null,
+      title: "Voice Assistant System",
+      description: "Intelligent voice assistant with multi-language support and contextual understanding. Integrated with various APIs for enhanced functionality.",
+      images: [],
+      technologies: ["Node.js", "WebSockets", "AWS", "MongoDB"],
+      date: "2023",
+      link: "#",
     },
   ];
 
@@ -56,29 +65,74 @@ const PastWork = () => {
         </div>
       </section>
 
-      {/* Large Showcase Frames */}
+      {/* Portfolio Projects */}
       <section className="py-12 px-4">
-        <div className="container mx-auto max-w-7xl space-y-16">
-          {showcaseItems.map((item) => (
+        <div className="container mx-auto max-w-7xl space-y-12">
+          {projects.map((project, index) => (
             <Card 
-              key={item.id}
-              className="overflow-hidden border-border/50 bg-card hover:shadow-2xl transition-all duration-500"
+              key={project.id}
+              className="overflow-hidden border-border/50 bg-card hover:shadow-xl transition-all duration-300"
             >
-              {/* Large Image/Video Frame */}
-              <div className="relative aspect-video bg-muted overflow-hidden">
-                {item.image ? (
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
-                    <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
-                      <Tag className="w-12 h-12 text-primary" />
+              <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? 'md:grid-flow-dense' : ''}`}>
+                {/* Images Section */}
+                <div className={`bg-muted p-8 flex items-center justify-center ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
+                  {project.images.length > 0 ? (
+                    <div className="grid grid-cols-1 gap-4 w-full">
+                      {project.images.map((image, imgIndex) => (
+                        <img 
+                          key={imgIndex}
+                          src={image} 
+                          alt={`${project.title} screenshot ${imgIndex + 1}`}
+                          className="w-full h-auto object-contain rounded-lg shadow-lg"
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="w-full aspect-video flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
+                      <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
+                        <Tag className="w-10 h-10 text-primary" />
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Content Section */}
+                <div className="p-8 flex flex-col justify-center space-y-6">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                      <Calendar className="w-4 h-4" />
+                      <span>{project.date}</span>
+                    </div>
+                    <h2 className="text-3xl font-bold text-foreground">
+                      {project.title}
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide">
+                      Technologies
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="secondary">
+                          {tech}
+                        </Badge>
+                      ))}
                     </div>
                   </div>
-                )}
+
+                  <div className="pt-4">
+                    <Button variant="outline" className="gap-2" asChild>
+                      <a href={project.link}>
+                        View Project
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
               </div>
             </Card>
           ))}
