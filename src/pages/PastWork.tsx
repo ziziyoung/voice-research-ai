@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Calendar, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
 import mobileDesignerScreenshot from "@/assets/cyclone-mobile-designer.png";
+import aiResearchPlatform from "@/assets/ai-research-platform.png";
 
 const PastWork = () => {
   const projects = [
@@ -20,7 +21,7 @@ const PastWork = () => {
       id: 2,
       title: "AI Research Platform",
       description: "Advanced AI-powered research platform with natural language processing capabilities. Enables efficient data analysis and insight generation.",
-      images: [],
+      images: [aiResearchPlatform],
       technologies: ["Python", "TensorFlow", "React", "PostgreSQL"],
       date: "2024",
       link: "#",
