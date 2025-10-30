@@ -92,11 +92,11 @@ const PastWork = () => {
             >
               <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? 'md:grid-flow-dense' : ''}`}>
                 {/* Images Section */}
-                <div className={`bg-gradient-to-br from-pink-100 via-pink-50 to-purple-50 dark:from-pink-900/20 dark:via-purple-900/10 dark:to-pink-800/10 ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
+                <div className={`bg-gradient-to-br from-pink-100 via-pink-50 to-purple-50 dark:from-pink-900/20 dark:via-purple-900/10 dark:to-pink-800/10 min-h-[500px] ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
                   {project.images.length > 0 ? (
                     project.images.length > 1 ? (
                       <Carousel 
-                        className="w-full h-full"
+                        className="w-full h-full min-h-[500px]"
                         plugins={[
                           Autoplay({
                             delay: 3000,
@@ -106,29 +106,29 @@ const PastWork = () => {
                           loop: true,
                         }}
                       >
-                        <CarouselContent className="h-full">
+                        <CarouselContent className="h-full min-h-[500px]">
                           {project.images.map((image, imgIndex) => (
-                            <CarouselItem key={imgIndex} className="h-full">
+                            <CarouselItem key={imgIndex} className="h-full min-h-[500px] flex items-center justify-center p-4">
                               <img 
                                 src={image} 
                                 alt={`${project.title} screenshot ${imgIndex + 1}`}
-                                className={`w-full h-full ${imgIndex === project.images.length - 1 ? 'object-contain' : 'object-cover'}`}
+                                className="max-w-full max-h-full object-contain"
                               />
                             </CarouselItem>
                           ))}
                         </CarouselContent>
                       </Carousel>
                     ) : (
-                      <div className="w-full h-full">
+                      <div className="w-full h-full min-h-[500px] flex items-center justify-center p-4">
                         <img 
                           src={project.images[0]} 
                           alt={`${project.title} screenshot`}
-                          className="w-full h-full object-cover"
+                          className="max-w-full max-h-full object-contain"
                         />
                       </div>
                     )
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center">
+                    <div className="w-full h-full min-h-[500px] flex items-center justify-center">
                       <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
                         <Tag className="w-10 h-10 text-primary" />
                       </div>
