@@ -12,9 +12,12 @@ import aiPlatform3 from "@/assets/ai-platform-3.png";
 import aiPlatform4 from "@/assets/ai-platform-4.png";
 import aiPlatform5 from "@/assets/ai-platform-5.png";
 import aiPlatform6 from "@/assets/ai-platform-6.png";
-import voiceAssistant1 from "@/assets/voice-assistant-1.png";
-import voiceAssistant2 from "@/assets/voice-assistant-2.png";
-import voiceAssistant3 from "@/assets/voice-assistant-3.png";
+import aiPlatform7 from "@/assets/ai-platform-7.png";
+import aiPlatform8 from "@/assets/ai-platform-8.png";
+import aiPlatform9 from "@/assets/ai-platform-9.png";
+import aiPlatform10 from "@/assets/ai-platform-10.png";
+import aiPlatform11 from "@/assets/ai-platform-11.png";
+import aiPlatform12 from "@/assets/ai-platform-12.png";
 
 const PastWork = () => {
   const projects = [
@@ -31,7 +34,7 @@ const PastWork = () => {
       id: 2,
       title: "AI Research Platform",
       description: "Advanced AI-powered research platform with natural language processing capabilities. Enables efficient data analysis and insight generation.",
-      images: [aiPlatform1, aiPlatform2, aiPlatform3, aiPlatform4, aiPlatform5, aiPlatform6],
+      images: [aiPlatform1, aiPlatform2, aiPlatform3, aiPlatform4, aiPlatform5, aiPlatform6, aiPlatform7, aiPlatform8, aiPlatform9, aiPlatform10, aiPlatform11, aiPlatform12],
       technologies: ["Python", "TensorFlow", "React", "PostgreSQL"],
       date: "2024",
       link: "#",
@@ -40,7 +43,7 @@ const PastWork = () => {
       id: 3,
       title: "Voice Assistant System",
       description: "Intelligent voice assistant with multi-language support and contextual understanding. Integrated with various APIs for enhanced functionality.",
-      images: [voiceAssistant1, voiceAssistant2, voiceAssistant3],
+      images: [],
       technologies: ["Node.js", "WebSockets", "AWS", "MongoDB"],
       date: "2023",
       link: "#",
