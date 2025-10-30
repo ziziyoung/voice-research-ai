@@ -3,8 +3,18 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Calendar, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import mobileDesignerScreenshot from "@/assets/cyclone-mobile-designer.png";
-import aiResearchPlatform from "@/assets/ai-research-platform.png";
+import dashboardOverview from "@/assets/dashboard-overview.png";
+import dashboardNlp from "@/assets/dashboard-nlp-analysis.png";
+import knowledgeGraph1 from "@/assets/knowledge-graph-1.png";
+import knowledgeGraph2 from "@/assets/knowledge-graph-2.png";
+import dashboardInsights from "@/assets/dashboard-insights.png";
 
 const PastWork = () => {
   const projects = [
@@ -21,7 +31,7 @@ const PastWork = () => {
       id: 2,
       title: "AI Research Platform",
       description: "Advanced AI-powered research platform with natural language processing capabilities. Enables efficient data analysis and insight generation.",
-      images: [aiResearchPlatform],
+      images: [dashboardOverview, dashboardNlp, knowledgeGraph1, knowledgeGraph2, dashboardInsights],
       technologies: ["Python", "TensorFlow", "React", "PostgreSQL"],
       date: "2024",
       link: "#",
@@ -78,16 +88,40 @@ const PastWork = () => {
                 {/* Images Section */}
                 <div className={`bg-gradient-to-br from-pink-100 via-pink-50 to-purple-50 dark:from-pink-900/20 dark:via-purple-900/10 dark:to-pink-800/10 ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
                   {project.images.length > 0 ? (
-                    <div className="w-full h-full">
-                      {project.images.map((image, imgIndex) => (
+                    project.images.length > 1 ? (
+                      <Carousel
+                        opts={{
+                          align: "start",
+                          loop: true,
+                        }}
+                        plugins={[
+                          Autoplay({
+                            delay: 3000,
+                          }),
+                        ]}
+                        className="w-full h-full"
+                      >
+                        <CarouselContent>
+                          {project.images.map((image, imgIndex) => (
+                            <CarouselItem key={imgIndex}>
+                              <img 
+                                src={image} 
+                                alt={`${project.title} screenshot ${imgIndex + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                      </Carousel>
+                    ) : (
+                      <div className="w-full h-full">
                         <img 
-                          key={imgIndex}
-                          src={image} 
-                          alt={`${project.title} screenshot ${imgIndex + 1}`}
+                          src={project.images[0]} 
+                          alt={`${project.title} screenshot`}
                           className="w-full h-full object-cover"
                         />
-                      ))}
-                    </div>
+                      </div>
+                    )
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
                       <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
