@@ -43,7 +43,7 @@ const PastWork = () => {
       technologies: ["Marketing Dashboard", "Digital Marketing", "Business Growth", "Customer Acquisition", "Lead Matching"],
       technologiesLabel: "KEY WORDS",
       date: "2022",
-      link: "#",
+      link: "https://www.yilutong.com/officialWebsite/page/digital/zhangketong.html",
     },
     {
       id: 3,
