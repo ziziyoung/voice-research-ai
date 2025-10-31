@@ -51,7 +51,7 @@ const PastWork = () => {
       description: "All-in-one scalable B2B & B2C e-Commerce SaaS Platform",
       images: [voiceAssistant1, voiceAssistant2, voiceAssistant3],
       technologies: ["AWS", "Alibaba Cloud", "GCP", "SaaS", "OMS Omnichannel Order Management", "CEM Customer Engagement", "CDP Customer Data Platform"],
-      date: "2023",
+      date: "2018",
       link: "https://terminus.io/product/16042",
     },
     {
