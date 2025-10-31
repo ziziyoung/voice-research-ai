@@ -57,7 +57,7 @@ const PastWork = () => {
     {
       id: 4,
       title: "China Mobile E-App",
-      description: "Description for the new project. Add your project details here including key features and achievements.",
+      description: "Enterprise Social App for 570K Employees — by China Mobile",
       images: [mobileSocialApp],
       technologies: [],
       date: "2015",
