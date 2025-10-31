@@ -59,7 +59,7 @@ const PastWork = () => {
       title: "China Mobile E-App",
       description: "Enterprise Social App for 570K Employees — by China Mobile",
       images: [mobileSocialApp],
-      technologies: [],
+      technologies: ["Employee Directory", "Conference Call", "Voice & Video Chat", "Corporate Circles", "Corporate Forum"],
       date: "2015",
       link: "#",
     },
