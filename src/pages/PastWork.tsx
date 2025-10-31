@@ -60,7 +60,7 @@ const PastWork = () => {
       description: "Description for the new project. Add your project details here including key features and achievements.",
       images: [mobileSocialApp],
       technologies: [],
-      date: "2024",
+      date: "2015",
       link: "#",
     },
   ];
