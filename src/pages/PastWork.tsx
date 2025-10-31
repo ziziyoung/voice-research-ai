@@ -59,7 +59,7 @@ const PastWork = () => {
       title: "China Mobile E-App",
       description: "Description for the new project. Add your project details here including key features and achievements.",
       images: [mobileSocialApp],
-      technologies: ["React", "TypeScript", "Node.js"],
+      technologies: [],
       date: "2024",
       link: "#",
     },
