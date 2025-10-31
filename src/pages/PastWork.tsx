@@ -61,7 +61,7 @@ const PastWork = () => {
       images: [mobileSocialApp],
       technologies: ["Employee Directory", "Conference Call", "Voice & Video Chat", "Corporate Circles", "Corporate Forum"],
       date: "2015",
-      link: "#",
+      link: "https://apkpure.com/%E5%B0%8F%E7%A7%BB%E4%BA%BA%E5%AE%B6/com.cmri.chinamobile",
     },
   ];
 
