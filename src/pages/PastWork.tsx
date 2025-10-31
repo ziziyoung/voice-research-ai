@@ -48,7 +48,7 @@ const PastWork = () => {
     {
       id: 3,
       title: "B2B/B2C e-Commerce SaaS Solution",
-      description: "Intelligent voice assistant with multi-language support and contextual understanding. Integrated with various APIs for enhanced functionality.",
+      description: "All-in-one scalable B2B & B2C e-Commerce SaaS Platform",
       images: [voiceAssistant1, voiceAssistant2, voiceAssistant3],
       technologies: ["Node.js", "WebSockets", "AWS", "MongoDB"],
       date: "2023",
