@@ -33,7 +33,7 @@ const PastWork = () => {
       images: [mobileDesignerScreenshot, aiRpaWorkflow],
       technologies: ["OCR", "Agentic Workflows", "Computer Vision", "UI Automation"],
       date: "2022",
-      link: "#",
+      link: "https://www.cyclone-robotics.com/product/info_2.html",
     },
     {
       id: 2,
