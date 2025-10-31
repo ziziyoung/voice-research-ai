@@ -52,7 +52,7 @@ const PastWork = () => {
       images: [voiceAssistant1, voiceAssistant2, voiceAssistant3],
       technologies: ["AWS", "Alibaba Cloud", "GCP", "SaaS", "OMS Omnichannel Order Management", "CEM Customer Engagement", "CDP Customer Data Platform"],
       date: "2023",
-      link: "#",
+      link: "https://terminus.io/product/16042",
     },
     {
       id: 4,
