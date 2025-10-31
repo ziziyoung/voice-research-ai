@@ -22,6 +22,7 @@ import voiceAssistant1 from "@/assets/voice-assistant-1.png";
 import voiceAssistant2 from "@/assets/voice-assistant-2.png";
 import voiceAssistant3 from "@/assets/voice-assistant-3.png";
 import mobileSocialApp from "@/assets/mobile-social-app.png";
+import aiRpaWorkflow from "@/assets/ai-rpa-workflow.png";
 
 const PastWork = () => {
   const projects = [
@@ -29,7 +30,7 @@ const PastWork = () => {
       id: 1,
       title: "AI-RPA Agentic Workflows",
       description: "A comprehensive mobile design application featuring intuitive UI/UX tools and real-time collaboration capabilities. Built with modern frameworks to deliver seamless user experience across devices.",
-      images: [mobileDesignerScreenshot],
+      images: [mobileDesignerScreenshot, aiRpaWorkflow],
       technologies: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
       date: "2022",
       link: "#",
