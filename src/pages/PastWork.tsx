@@ -21,6 +21,7 @@ import aiPlatform12 from "@/assets/ai-platform-12.png";
 import voiceAssistant1 from "@/assets/voice-assistant-1.png";
 import voiceAssistant2 from "@/assets/voice-assistant-2.png";
 import voiceAssistant3 from "@/assets/voice-assistant-3.png";
+import mobileSocialApp from "@/assets/mobile-social-app.png";
 
 const PastWork = () => {
   const projects = [
@@ -55,7 +56,7 @@ const PastWork = () => {
       id: 4,
       title: "New Project",
       description: "Description for the new project. Add your project details here including key features and achievements.",
-      images: [],
+      images: [mobileSocialApp],
       technologies: ["React", "TypeScript", "Node.js"],
       date: "2024",
       link: "#",
