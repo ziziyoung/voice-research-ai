@@ -31,7 +31,7 @@ const PastWork = () => {
       title: "AI-RPA Agentic Workflows",
       description: "A comprehensive mobile design application featuring intuitive UI/UX tools and real-time collaboration capabilities. Built with modern frameworks to deliver seamless user experience across devices.",
       images: [mobileDesignerScreenshot, aiRpaWorkflow],
-      technologies: [],
+      technologies: ["OCR", "Agentic Workflows", "Computer Vision", "UI Automation"],
       date: "2022",
       link: "#",
     },
