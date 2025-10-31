@@ -38,7 +38,7 @@ const PastWork = () => {
     {
       id: 2,
       title: "SaaS Marketing & App Solutions",
-      description: "Advanced AI-powered research platform with natural language processing capabilities. Enables efficient data analysis and insight generation.",
+      description: "SaaS Intelligent Marketing Platform",
       images: [aiPlatform1, aiPlatform2, aiPlatform3, aiPlatform4, aiPlatform5, aiPlatform6, aiPlatform7, aiPlatform8, aiPlatform9, aiPlatform10, aiPlatform11, aiPlatform12],
       technologies: ["Marketing Dashboard", "Digital Marketing", "Business Growth", "Customer Acquisition", "Lead Matching"],
       technologiesLabel: "KEY WORDS",
