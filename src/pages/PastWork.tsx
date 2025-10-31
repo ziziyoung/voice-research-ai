@@ -41,7 +41,7 @@ const PastWork = () => {
       description: "Advanced AI-powered research platform with natural language processing capabilities. Enables efficient data analysis and insight generation.",
       images: [aiPlatform1, aiPlatform2, aiPlatform3, aiPlatform4, aiPlatform5, aiPlatform6, aiPlatform7, aiPlatform8, aiPlatform9, aiPlatform10, aiPlatform11, aiPlatform12],
       technologies: ["Python", "TensorFlow", "React", "PostgreSQL"],
-      date: "2024",
+      date: "2022",
       link: "#",
     },
     {
