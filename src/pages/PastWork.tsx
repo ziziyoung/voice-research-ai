@@ -31,7 +31,7 @@ const PastWork = () => {
       description: "A comprehensive mobile design application featuring intuitive UI/UX tools and real-time collaboration capabilities. Built with modern frameworks to deliver seamless user experience across devices.",
       images: [mobileDesignerScreenshot],
       technologies: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
-      date: "2024",
+      date: "2022",
       link: "#",
     },
     {
