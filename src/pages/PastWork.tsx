@@ -47,7 +47,7 @@ const PastWork = () => {
     },
     {
       id: 3,
-      title: "Voice Assistant System",
+      title: "B2B/B2C e-Commerce SaaS Solution",
       description: "Intelligent voice assistant with multi-language support and contextual understanding. Integrated with various APIs for enhanced functionality.",
       images: [voiceAssistant1, voiceAssistant2, voiceAssistant3],
       technologies: ["Node.js", "WebSockets", "AWS", "MongoDB"],
