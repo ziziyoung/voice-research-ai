@@ -27,7 +27,7 @@ const PastWork = () => {
   const projects = [
     {
       id: 1,
-      title: "Mobile Designer App",
+      title: "AI-RPA Agentic Workflows",
       description: "A comprehensive mobile design application featuring intuitive UI/UX tools and real-time collaboration capabilities. Built with modern frameworks to deliver seamless user experience across devices.",
       images: [mobileDesignerScreenshot],
       technologies: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
