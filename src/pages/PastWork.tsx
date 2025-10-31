@@ -50,7 +50,7 @@ const PastWork = () => {
       title: "B2B/B2C e-Commerce SaaS Solution",
       description: "All-in-one scalable B2B & B2C e-Commerce SaaS Platform",
       images: [voiceAssistant1, voiceAssistant2, voiceAssistant3],
-      technologies: ["Node.js", "WebSockets", "AWS", "MongoDB"],
+      technologies: ["AWS"],
       date: "2023",
       link: "#",
     },
