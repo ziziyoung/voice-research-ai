@@ -48,7 +48,7 @@ const PastWork = () => {
     {
       id: 3,
       title: "B2B/B2C e-Commerce SaaS Solution",
-      description: "All-in-one scalable B2B & B2C e-Commerce SaaS Platform",
+      description: "All-in-one scalable B2B & B2C e-Commerce SaaS Platform — Alibaba Cloud",
       images: [voiceAssistant1, voiceAssistant2, voiceAssistant3],
       technologies: ["AWS", "Alibaba Cloud", "GCP", "SaaS", "OMS Omnichannel Order Management", "CEM Customer Engagement", "CDP Customer Data Platform"],
       date: "2018",
